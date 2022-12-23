@@ -9,7 +9,7 @@ function getTime() {
                 minute = minute < 10 ? '0' + minute : minute;
                 var seconds = date.getSeconds(); //获取秒
                 seconds = seconds < 10 ? '0' + seconds : seconds;
-                return year + '年' + month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+                return year + '-' + month + '-' + day + '&nbsp;' + hour + ':' + minute + ':' + seconds;
             }
      
             setInterval(function() {
