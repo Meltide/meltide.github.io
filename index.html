@@ -13,8 +13,10 @@
 			name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
 		<link href="img/favoricon.png" rel="shortcut icon">
 		<link href="css/mdui.min.css" rel="stylesheet">
+		<link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
 		<script src="js/mdui.min.js"></script>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
 		<style>
 			.avatarh {
 				background-color: darkcyan;
@@ -67,6 +69,17 @@
 			footer a:visited {
 				color: dimgrey;
 			}
+			
+			.banner {
+				background-color: indianred;
+				color: white;
+				height:45px;
+				width: 100%;
+				padding-top: 20px;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 900;
+			}
 		</style>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -113,21 +126,30 @@
 				</li>
 				<li class="mdui-subheader">友情链接</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://high20212021.github.io')">
+					<!--
 					<div class="avatarh mdui-m-r-2">
 						<span class="mdui-text-color-white mdui-typo-headline" style="padding-left: 6.7px;">H</span>
 					</div>
+					-->
+					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px;" src="https://high20212021.github.io/highstudios.jpg"></mdui-avatar>
 					<div class="mdui-list-item-content">HighStudios</div>
 				</li>
 				<li class=" mdui-list-item mdui-ripple" onclick="window.open('https://amdisyes.github.io/start.html')">
+					<!--
 					<div class="avatarq mdui-m-r-2">
 						<span class="mdui-text-color-white mdui-typo-headline" style="padding-left: 6.7px;">Q</span>
 					</div>
+					-->
+					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px; background-color: brown; color: white;">起</mdui-avatar>
 					<div class="mdui-list-item-content">起始页</div>
 				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('http://lengshanyun.top')">
+					<!--
 					<div class="avatarc mdui-m-r-2">
 						<span class="mdui-text-color-white mdui-typo-headline" style="padding-left: 6.7px;">C</span>
 					</div>
+					-->
+					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px; background-color: white;" src="https://lengshanyun.top/assets/img/logo.png"></mdui-avatar>
 					<div class="mdui-list-item-content">Core Studio</div>
 				</li>
 			</ul>
@@ -154,6 +176,7 @@
 			</div>
 		</div>
 		<div class="mdui-container" id="top">
+			<div class="banner">2024新年快乐</div>
 			<div class="mdui-row" style="padding-top: 14px;">
 				<div class="mdui-col-xs-9 mdui-col-sm-10">
 					<span class="mdui-typo-display-2"><b>AMDISYES</b></span>
