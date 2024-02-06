@@ -1,0 +1,67 @@
+<html lang="zh_CN">
+    <head>
+        <meta charset="utf-8">
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>起始页</title>
+    </head>
+    <body background="img/bg.jpg">
+        <center>
+            <h1>
+                <div class="box">
+                    <span>正在获取时间...</span>
+                </div>
+            </h1>
+            <hr>
+            <p>
+                <div id="hitokoto" class="hhh">
+                    <span id="hitokoto">:D 获取中...</span> ——<span id="from"></span>
+                </div>
+            </p>
+            <div class="search">
+                <form onsubmit="return search()">
+                    <input type=text class="ssk" autocomplete="off" autofocus id="search_input" placeholder="必应搜索...">
+                    <button class="anniu" onclick="return search()">搜索</button>
+                </form>
+            </div>
+            <hr>
+            <h2>快捷导航</h2>
+            <p>
+                <a href="https://www.bing.com">
+                    <button>必应</button>
+                </a>
+                <a href="https://www.baidu.com">
+                    <button>百度</button>
+                </a>
+                <a href="http://www.sogou.com">
+                    <button>搜狗</button>
+                </a>
+            </p>
+            <p>
+                <a href="https://www.github.com">
+                    <button>Github</button>
+                </a>
+                <a href="https://www.gitee.com">
+                    <button>Gitee</button>
+                </a>
+            </p>
+            <p>
+                <a href="http://43.143.9.131">
+                    <button>RC官网</button>
+                </a>
+                <a href="http://101.35.253.48">
+                    <button>生存斧官网</button>
+                </a>
+                <a href="http://101.35.253.48/game">
+                    <button>生存斧小游戏</button>
+                </a>
+                <a href="http://iosarchive.org.cn">
+                    <button>iOS档案馆</button>
+                </a>
+            </p>
+        </center>
+        <script src="js/search.js"></script>
+        <script src="js/time.js"></script>
+        <script src="js/yiyan.js"></script>
+    </body>
+</html>
