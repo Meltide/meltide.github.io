@@ -79,13 +79,13 @@
 	<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar mdui-drawer-body-left">
 		<div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
 			<div class="mdui-toolbar mdui-color-white">
-				<a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon">
+				<a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '菜单'}">
 					<i class="mdui-icon material-icons">&#xe5d2;</i>
 				</a>
 				<span class="mdui-typo-headline">AMDISYES-Blog</span>
 				<div class="mdui-toolbar-spacer"></div>
 				<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon">
+					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}">
 						<i class="mdui-icon material-icons">&#xe8b6;</i>
 					</button>
 					<form onsubmit="return search()">
@@ -141,26 +141,40 @@
 				<button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
 			</div>
 		</div>
+		<div class="mdui-dialog" id="avatar" style="height: 400px; width: 400px;">
+			<div class="mdui-dialog-content">
+				<div class="mdui-container">
+					<img class="mdui-img-fluid" alt="帅到爆炸的头像"
+						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
+				</div>
+			</div>
+			<div class="mdui-dialog-actions">
+				<span style="text-align: left;" class="mdui-typo-body-2">长按图片保存</span>
+				<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+			</div>
+		</div>
 		<div class="mdui-container" id="top">
 			<div class="mdui-row" style="padding-top: 14px;">
 				<div class="mdui-col-xs-9 mdui-col-sm-10">
 					<span class="mdui-typo-display-2"><b>AMDISYES</b></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
-					<span id="year" class="mdui-typo-body-2"></span><span>年</span><span class="mdui-m-t-2 mdui-typo-body-2" id="date"></span>
+					<span id="year" class="mdui-typo-body-2"></span><span>年</span><span
+						class="mdui-m-t-2 mdui-typo-body-2" id="date"></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe0c9;</i>
 					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2">获取中OvO...<span id="from"></span></span>
 					<br>
 					<form onsubmit="return search()" class="mdui-m-b-2">
-						<input type="text" class="searchbox mdui-shadow-3 mdui-m-t-1 mdui-m-b-1" autocomplete="off" autofocus
-							id="search_input" placeholder="必应搜索...">
+						<input type="text" class="searchbox mdui-shadow-3 mdui-m-t-1 mdui-m-b-1" autocomplete="off"
+							autofocus id="search_input" placeholder="必应搜索...">
 						<button class="mdui-btn mdui-color-pink mdui-btn-raised" onclick="return search()">搜索</button>
 					</form>
 				</div>
 				<div class="mdui-col-xs-3 mdui-col-sm-2">
 					<img class="mdui-img-fluid" style="border-radius: 50%;" alt="帅到爆炸的头像"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
+						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg"
+						mdui-tooltip="{content: '点击看大图'}" mdui-dialog="{target: '#avatar'}">
 				</div>
 			</div>
 		</div>
@@ -170,12 +184,19 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">关于我</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;关于我</div>
 							<div class="mdui-card-content mdui-typo">
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0b7;</i>&nbsp;QQ:
 									3480656548</li>
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe639;</i>&nbsp;B站: <a
 										href="https://space.bilibili.com/57690791" target="_blank">AMDISYES</a></li>
+								<li><svg height="15" width="15" aria-hidden="true" viewBox="0.9 -5 16 19" version="1.1"
+										data-view-component="true"
+										class="octicon octicon-mark-github v-align-middle color-fg-default">
+										<path
+											d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+										</path>
+									</svg>&nbsp;Github: <a href="https://github.com/AMDISYES">AMDISYES</a></li>
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0be;</i>&nbsp;邮箱1:
 									amdisyes@outlook.com</li>
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0e1;</i>&nbsp;邮箱2:
@@ -187,13 +208,14 @@
 					</div>
 				</div>
 				<div class="mdui-col-sm-6">
-					<div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 228px;">
+					<div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 251.5px;">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">关于本网站</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;关于本网站</div>
 							<div class="mdui-card-content mdui-typo">
 								<li>AMDISYES编写了100%的网站</li>
 								<li>网站使用框架: <a href="https://mdui.org">MDUI</a> v1.0.2</li>
 								<li>网站使用字体: Roboto</li>
+								<li>获取QQ头像的API来自腾讯云开发者社区</li>
 								<li>一言API(Hitokoto)由知乎大佬给出</li>
 							</div>
 						</div>
@@ -208,7 +230,7 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">Stream Client</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;Stream Client</div>
 							<div class="mdui-card-content mdui-typo">
 								一个不算优秀的0.14客户端
 								<br>
@@ -222,7 +244,7 @@
 					</div>
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">CQ Chatroom</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;CQ Chatroom</div>
 							<div class="mdui-card-content mdui-typo">
 								一个易语言局域网聊天室
 								<br>
@@ -238,7 +260,7 @@
 					</div>
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">MCSungou资源站</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;MCSungou资源站</div>
 							<div class="mdui-card-content mdui-typo">
 								很早以前搞的了，资源长期未更新，采用永硕e盘
 							</div>
@@ -252,7 +274,7 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">ServerHelper</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;ServerHelper</div>
 							<div class="mdui-card-content mdui-typo">
 								一个适用于PocketMine-MP的“全能”插件
 								<br>
@@ -268,7 +290,7 @@
 					</div>
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">H4起始页</div>
+							<div class="mdui-card-primary-title">&nbsp;&nbsp;H4起始页</div>
 							<div class="mdui-card-content mdui-typo">
 								基于HTML4技术的简单起始页
 								<br>
@@ -285,15 +307,16 @@
 			</div>
 		</div>
 		<footer class="mdui-container-fluid">
-			<span>&copy;AMDISYES 2023~<span id="year"></span>&nbsp;&nbsp;</span>
+			<span>&copy;AMDISYES 2023~<span id="cpyear"></span>&nbsp;&nbsp;</span>
 			<a href="#top" class="mdui-typo">回顶部</a>
-			<a href="http://wapmz.com/in/44" class="mdui-m-l-1"><img src="http://wapmz.com/cn/big/44" alt="wapmz.com"
-					style="height: 5%; width: 5%;"></a>
+			<a href="http://wapmz.com/in/44" class="mdui-m-l-1"><img src="http://wapmz.com/cn/small/44"
+					alt="wapmz.com"></a>
 		</footer>
 		<script>
 			//获取年份
 			var dt = new Date();
 			document.getElementById("year").innerHTML = dt.getFullYear();
+			document.getElementById("cpyear").innerHTML = dt.getFullYear();
 			//必应搜索
 			function search() {
 				if (document.getElementById("search_input").value != "") {
