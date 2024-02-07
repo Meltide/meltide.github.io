@@ -14,83 +14,10 @@
 		<link href="img/favoricon.png" rel="shortcut icon">
 		<link href="css/mdui.min.css" rel="stylesheet">
 		<link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
 		<script src="js/mdui.min.js"></script>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
-		<style>
-			body {
-				background-color: white;
-			}
-
-			.avatarh {
-				background-color: darkcyan;
-				border-radius: 50%;
-				width: 30px;
-				height: 30px;
-			}
-
-			.avatarq {
-				background-color: brown;
-				border-radius: 50%;
-				width: 30px;
-				height: 30px;
-			}
-
-			.avatarc {
-				background-color: darkolivegreen;
-				border-radius: 50%;
-				width: 30px;
-				height: 30px;
-			}
-
-			.searchbox {
-				background-color: white;
-				border-radius: 2px;
-				border: 0;
-				height: 33px;
-				padding-left: 10px;
-			}
-
-			footer {
-				background-color: #EEEEEE;
-				padding-top: 6px;
-				padding-bottom: 6px;
-				padding-left: 10px;
-				padding-right: 10px;
-				text-align: center;
-			}
-
-			footer span {
-				color: dimgrey;
-				font-size: 13px;
-			}
-
-			footer a {
-				color: dimgrey;
-				font-size: 13px;
-			}
-
-			footer a:visited {
-				color: dimgrey;
-			}
-
-			.banner {
-				background-color: #EF5350;
-				color: #FFC107;
-				color: white;
-				height: 45px;
-				width: 100%;
-				padding-top: 20px;
-				text-align: center;
-				font-size: 25px;
-				font-weight: 900;
-			}
-
-			.mdui-card-primary-title {
-				margin-left: 12px;
-				font-weight: 700;
-			}
-		</style>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -363,81 +290,7 @@
 			<a href="#top" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
-		<script>
-			//获取年份
-			var dt = new Date();
-			document.getElementById("year").innerHTML = dt.getFullYear();
-			document.getElementById("cpyear").innerHTML = dt.getFullYear();
-			//必应搜索
-			function search() {
-				if (document.getElementById("search_input").value != "") {
-					window.location.href = "https://cn.bing.com/search?q=" + document.getElementById("search_input").value;
-					document.getElementById("search_input").value = "";
-				}
-				return false;
-			}
-			//一言
-			var xhr = new XMLHttpRequest();
-			xhr.open('get', 'https://v1.hitokoto.cn/?c=b');
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState === 4) {
-					var data = JSON.parse(xhr.responseText);
-					var hitokoto = document.getElementById('hitokoto');
-					var fromm = document.getElementById("from")
-					fromm.innerText = data.from;
-					hitokoto.innerText = data.hitokoto;
-				}
-			}
-			xhr.send();
-			//获取日期
-			var ThisNowDate = new Date();
-			if (document.getElementById("date")) {
-				if (ThisNowDate.getDay() == 1)
-					var Weeks = '星期一'
-				else if (ThisNowDate.getDay() == 2)
-					var Weeks = '星期二'
-				else if (ThisNowDate.getDay() == 3)
-					var Weeks = '星期三'
-				else if (ThisNowDate.getDay() == 4)
-					var Weeks = '星期四'
-				else if (ThisNowDate.getDay() == 5)
-					var Weeks = '星期五'
-				else if (ThisNowDate.getDay() == 6)
-					var Weeks = '星期六'
-				else if (ThisNowDate.getDay() == 0)
-					var Weeks = '星期日'
-				document.getElementById('date').innerHTML = ThisNowDate.getMonth() + 1 +
-					'月' +
-					ThisNowDate.getDate() + '日' + ' ' +
-					Weeks;
-			}
-			//鼠标点击特效
-			var a_idx = 0;
-			jQuery(document).ready(function($) {
-				$("body").click(function(e) {
-					var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
-					var $i = $("<span/>").text(a[a_idx]);
-					a_idx = (a_idx + 1) % a.length;
-					var x = e.pageX,
-						y = e.pageY;
-					$i.css({
-						"z-index": 100000000,
-						"top": y - 20,
-						"left": x,
-						"position": "absolute",
-						"font-weight": "bold",
-						"color": "#ff6651"
-					});
-					$("body").append($i);
-					$i.animate({
-						"top": y - 180,
-						"opacity": 0
-					}, 1500, function() {
-						$i.remove();
-					});
-				});
-			});
-		</script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
 <!--
