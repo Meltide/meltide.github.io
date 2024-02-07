@@ -85,6 +85,11 @@
 				font-size: 25px;
 				font-weight: 900;
 			}
+			
+			.mdui-card-primary-title {
+				margin-left: 12px;
+				font-weight: 700;
+			}
 		</style>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -143,15 +148,6 @@
 					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px;" src="https://high20212021.github.io/highstudios.jpg"></mdui-avatar>
 					<div class="mdui-list-item-content">HighStudios</div>
 				</li>
-				<li class=" mdui-list-item mdui-ripple" onclick="window.open('https://amdisyes.github.io/start.html')">
-					<!--
-					<div class="avatarq mdui-m-r-2">
-						<span class="mdui-text-color-white mdui-typo-headline" style="padding-left: 6.7px;">Q</span>
-					</div>
-					-->
-					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px; background-color: darkcyan; color: white;">起</mdui-avatar>
-					<div class="mdui-list-item-content">起始页</div>
-				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('http://lengshanyun.top')">
 					<!--
 					<div class="avatarc mdui-m-r-2">
@@ -201,10 +197,10 @@
 				<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
 			</div>
 		</div>
-		<marquee class="banner" scrolldelay="65">祝大家2024新年快乐，幸福团圆，阖家欢乐！</marquee>
+		<marquee class="banner">祝大家2024新年快乐，幸福团圆，阖家欢乐！</marquee>
 		<div class="mdui-container" id="top">
 			<div class="mdui-row" style="padding-top: 14px;">
-				<div class="mdui-col-xs-9 mdui-col-sm-10">
+				<div class="mdui-col-xs-9 mdui-col-sm-10 mdui-col-lg-11">
 					<span class="mdui-typo-display-2"><b>AMDISYES</b></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
@@ -217,10 +213,10 @@
 					<form onsubmit="return search()" class="mdui-m-b-2">
 						<input type="text" class="searchbox mdui-shadow-3 mdui-m-t-1 mdui-m-b-1" autocomplete="off"
 							autofocus id="search_input" placeholder="必应搜索...">
-						<button class="mdui-btn mdui-color-pink mdui-btn-raised" onclick="return search()">搜索</button>
+						<button class="mdui-btn mdui-color-pink mdui-btn-raised mdui-btn-icon" onclick="return search()" style="border-radius: 2px;"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
 					</form>
 				</div>
-				<div class="mdui-col-xs-3 mdui-col-sm-2">
+				<div class="mdui-col-xs-3 mdui-col-sm-2 mdui-col-lg-1">
 					<img class="mdui-img-fluid" style="border-radius: 50%;" alt="帅到爆炸的头像"
 						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg"
 						mdui-tooltip="{content: '点击看大图'}" mdui-dialog="{target: '#avatar'}">
@@ -233,7 +229,7 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>关于我</b></div>
+							<div class="mdui-card-primary-title">关于我</div>
 							<div class="mdui-card-content mdui-typo">
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0b7;</i>&nbsp;QQ:
 									3480656548</li>
@@ -259,7 +255,7 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 251.5px;">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>关于本网站</b></div>
+							<div class="mdui-card-primary-title">关于本网站</div>
 							<div class="mdui-card-content mdui-typo">
 								<li>AMDISYES编写了100%的网站</li>
 								<li>网站使用框架: <a href="https://mdui.org">MDUI</a> v1.0.2</li>
@@ -279,7 +275,7 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>Stream Client</b></div>
+							<div class="mdui-card-primary-title">Stream Client</div>
 							<div class="mdui-card-content mdui-typo">
 								一个不算优秀的0.14客户端
 								<br>
@@ -293,7 +289,7 @@
 					</div>
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>CQ Chatroom</b></div>
+							<div class="mdui-card-primary-title">CQ Chatroom</div>
 							<div class="mdui-card-content mdui-typo">
 								一个易语言局域网聊天室
 								<br>
@@ -309,7 +305,7 @@
 					</div>
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>MCSungou资源站</b></div>
+							<div class="mdui-card-primary-title">MCSungou资源站</div>
 							<div class="mdui-card-content mdui-typo">
 								很早以前搞的了，资源长期未更新，采用永硕e盘
 							</div>
@@ -323,7 +319,7 @@
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>ServerHelper</b></div>
+							<div class="mdui-card-primary-title">ServerHelper</div>
 							<div class="mdui-card-content mdui-typo">
 								一个适用于PocketMine-MP的“全能”插件
 								<br>
@@ -339,7 +335,7 @@
 					</div>
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">&nbsp;&nbsp;<b>H4起始页</b></div>
+							<div class="mdui-card-primary-title">H4起始页</div>
 							<div class="mdui-card-content mdui-typo">
 								基于HTML4技术的简单起始页
 								<br>
@@ -357,7 +353,7 @@
 		</div>
 		<footer class="mdui-container-fluid">
 			<span>&copy;AMDISYES 2023~<span id="cpyear"></span>&nbsp;&nbsp;</span>
-			<a href="#top" class="mdui-typo">回顶部</a>
+			<a href="#top" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
 		<script>
