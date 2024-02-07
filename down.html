@@ -24,7 +24,7 @@
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<title>AMDISYES-Blog - 文章</title>
+		<title>AMDISYES-Blog - 下载</title>
 	</head>
 	<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar mdui-drawer-body-left">
 		<div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0 mdui-appbar-scroll-toolbar-hide">
@@ -32,7 +32,7 @@
 				<a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '菜单'}">
 					<i class="mdui-icon material-icons">&#xe5d2;</i>
 				</a>
-				<span class="mdui-typo-headline">文章</span>
+				<span class="mdui-typo-headline">下载</span>
 				<div class="mdui-toolbar-spacer"></div>
 				<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
 					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}">
@@ -53,11 +53,11 @@
 					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
 					<div class="mdui-list-item-content">主页</div>
 				</li>
-				<li class="mdui-list-item mdui-ripple mdui-list-item-active">
+				<li class="mdui-list-item mdui-ripple" onclick="location.href='post.html'">
 					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe0e0;</i>
 					<div class="mdui-list-item-content">文章</div>
 				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='down.html'">
+				<li class="mdui-list-item mdui-ripple mdui-list-item-active">
 					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe2c0;</i>
 					<div class="mdui-list-item-content">下载</div>
 				</li>
@@ -122,73 +122,89 @@
 				<button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
 			</div>
 		</div>
-		<div class="mdui-container mdui-m-t-3 mdui-m-b-2" id="top">
-			<div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-header mdui-color-grey-50">
-					<img class="mdui-card-header-avatar"
+		<div class="mdui-dialog" id="avatar">
+			<div class="mdui-dialog-content">
+				<div class="mdui-container">
+					<img class="mdui-img-fluid" alt="帅到爆炸的头像"
 						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-					<div class="mdui-card-header-title">AMDISYES</div>
-					<div class="mdui-card-header-subtitle">2024-2-7 11:31:44</div>
 				</div>
-				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">社会主义核心价值观</div>
-					<div class="mdui-card-content mdui-typo">
-						<br>
-						个人层面：爱国、敬业、诚信、友善
-						<br>
-						个人层面：爱国、敬业、诚信、友善
-						<br>
-						个人层面：爱国、敬业、诚信、友善
-						<br>
-						个人层面：爱国、敬业、诚信、友善
+			</div>
+			<div class="mdui-dialog-actions">
+				<span style="text-align: left;" class="mdui-typo-body-2">长按图片保存</span>
+				<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+			</div>
+		</div>
+		<div class="mdui-container mdui-m-t-3 mdui-m-b-2">
+			<div class="mdui-row">
+				<div class="mdui-col-sm-6">
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
+						<div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">MCPECraft Advanced</div>
+							<div class="mdui-card-content mdui-typo">
+								修改者：AMDISYES 原作者：STEVE_MCPE
+								<br>
+								相比于原版的特点：
+								<br>
+								<li>支持流量玩服</li>
+								<li>添加了帧率显示</li>
+								<li>继承了原版MCPECraft的特性</li>
+								<b>访问密码：cvok</b>
+							</div>
+							<div class="mdui-card-actions">
+								<div class="mdui-btn mdui-color-pink"
+									onclick="window.open('https://wwhg.lanzouy.com/b02q1p9rg')">下载</div>
+							</div>
+						</div>
+					</div>
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
+						<div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">Windows 3.1 老软件</div>
+							<div class="mdui-card-content mdui-typo">
+								收集者：GLEAVE
+								<br>
+								<b>访问密码：LtVE</b>
+							</div>
+							<div class="mdui-card-actions">
+								<div class="mdui-btn mdui-color-pink"
+									onclick="window.open('https://www.123pan.com/s/2iYlVv-D5g43')">下载</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-header mdui-color-grey-50">
-					<img class="mdui-card-header-avatar"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-					<div class="mdui-card-header-title">AMDISYES</div>
-					<div class="mdui-card-header-subtitle">2024-2-7 11:31:44</div>
-				</div>
-				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">社会主义核心价值观</div>
-					<div class="mdui-card-content mdui-typo">
-						国家层面：富强、民主、文明、和谐
-						<br>
-						社会层面：自由、平等、公正、法治
-						<br>
-						个人层面：爱国、敬业、诚信、友善
+				<div class="mdui-col-sm-6">
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
+						<div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">MCPE Framework</div>
+							<div class="mdui-card-content mdui-typo">
+								作者：high20212021
+								<br>
+								<li>过度精简，甚至没有语言文件</li>
+								<b>访问密码：1gp5</b>
+							</div>
+							<div class="mdui-card-actions">
+								<div class="mdui-btn mdui-color-pink"
+									onclick="window.open('https://wwhg.lanzouy.com/b02q1paoj')">下载</div>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-header mdui-color-grey-50">
-					<img class="mdui-card-header-avatar"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-					<div class="mdui-card-header-title">AMDISYES</div>
-					<div class="mdui-card-header-subtitle">2024-2-6 19:50:56</div>
-				</div>
-				<div class="mdui-card-primary mdui-color-red-400">
-					<div class="mdui-card-primary-title">预祝大家2024年新年快乐！</div>
-					<div class="mdui-card-content mdui-typo"></div>
-				</div>
-			</div>
-			<div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-header mdui-color-grey-50">
-					<img class="mdui-card-header-avatar"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-					<div class="mdui-card-header-title">AMDISYES</div>
-					<div class="mdui-card-header-subtitle">2024-2-6 19:48:35</div>
-				</div>
-				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">全新的站点！</div>
-					<div class="mdui-card-content mdui-typo">
-						新年换新站
-						<br>
-						个人官网迁移至<a href="http://amdisyes.github.io">amdisyes.github.io</a>
-						<br>
-						新网站使用MDUI重写
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
+						<div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">生存斧主城小型还原版</div>
+							<div class="mdui-card-content mdui-typo">
+								作者：mougou
+								<br>
+								<li>还原度80%</li>
+								<li>1:3微缩还原</li>
+								<li>已还原主城跑酷和彩蛋</li>
+								<span class="mdui-text-color-red">注意：仅适用于MCPE 0.14.3 (0.14.1不行)</span>
+								<br>
+								<b>访问密码：无</b>
+							</div>
+							<div class="mdui-card-actions">
+								<div class="mdui-btn mdui-color-pink"
+									onclick="window.open('https://wwhg.lanzouy.com/iqwrO0lm54ud')">下载</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
