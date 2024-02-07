@@ -1,0 +1,72 @@
+body {
+	background-color: white;
+}
+
+.avatarh {
+	background-color: darkcyan;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+.avatarq {
+	background-color: brown;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+.avatarc {
+	background-color: darkolivegreen;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+.searchbox {
+	background-color: white;
+	border-radius: 2px;
+	border: 0;
+	height: 33px;
+	padding-left: 10px;
+}
+
+footer {
+	background-color: #EEEEEE;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+footer span {
+	color: dimgrey;
+	font-size: 13px;
+}
+
+footer a {
+	color: dimgrey;
+	font-size: 13px;
+}
+
+footer a:visited {
+	color: dimgrey;
+}
+
+.banner {
+	background-color: #EF5350;
+	color: #FFC107;
+	color: white;
+	height: 45px;
+	width: 100%;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.mdui-card-primary-title {
+	margin-left: 12px;
+	font-weight: 700;
+}
