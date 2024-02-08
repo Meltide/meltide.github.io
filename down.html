@@ -126,7 +126,7 @@
 				<button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
 			</div>
 		</div>
-		<div class="mdui-container mdui-m-t-3 mdui-m-b-2"  id="top">
+		<div class="mdui-container mdui-m-t-3 mdui-m-b-2" id="top">
 			<div class="mdui-row">
 				<div class="mdui-col-sm-6">
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
@@ -206,7 +206,10 @@
 			<a href="#top" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
-		<script src="js/index.js"></script>
+		<script>
+			var dt = new Date();
+			document.getElementById("cpyear1").innerHTML = dt.getFullYear();
+		</script>
 	</body>
 </html>
 <!--

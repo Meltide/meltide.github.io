@@ -25,7 +25,11 @@
 
 			.searchbox {
 				margin-bottom: 10px;
-				width: 235px;
+				width: 180px;
+			}
+
+			.mdui-btn-icon {
+				border-radius: 2px;
 			}
 		</style>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -139,11 +143,11 @@
 		<div class="mdui-container mdui-m-t-3 mdui-m-b-2" id="top">
 			<div class="mdui-row">
 				<div class="mdui-col-sm-6" style="white-space: nowrap;">
-					<div class="mdui-card mdui-m-b-2">
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">计算器</div>
 							<div class="mdui-card-content mdui-typo mdui-text-center">
-								<input class="searchbox mdui-shadow-3" id="inputbox">
+								<input class="searchbox mdui-shadow-3" id="inputbox" type="number">
 								<br>
 								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
 									onclick="document.getElementById('inputbox').value+='1'">1</button>
@@ -181,17 +185,54 @@
 								<button class="mdui-btn mdui-color-indigo mdui-btn-icon"
 									onclick="document.getElementById('inputbox').value+='/'">÷</button>
 								<br>
-								<button class="mdui-btn mdui-color-teal mdui-btn-icon" onclick="backspace()"><i class="mdui-icon material-icons">&#xe317;</i></button>
+								<button class="mdui-btn mdui-color-teal mdui-btn-icon" onclick="backspace()"><i
+										class="mdui-icon material-icons">&#xe317;</i></button>
 								<button class="mdui-btn mdui-color-teal"
-									onclick="document.getElementById('inputbox').value=eval(document.getElementById('inputbox').value)" style="width: 65px; border-radius: 35px; font-size: 30px;">=</button>
+									onclick="document.getElementById('inputbox').value=eval(document.getElementById('inputbox').value)"
+									style="width: 65px; border-radius: 2px; font-size: 30px;">=</button>
 								<button class="mdui-btn mdui-color-teal mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value=''"><i class="mdui-icon material-icons">&#xe0b8;</i></button>
+									onclick="document.getElementById('inputbox').value=''"><i
+										class="mdui-icon material-icons">&#xe0b8;</i></button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="mdui-col-sm-6">
-					
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
+						<div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">常用分数转换器</div>
+							<div class="mdui-card-content mdui-typo">
+								总分200转100分制度并判断及格（120分及格）：
+								<div style="white-space: nowrap;">
+									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs200" type="number">
+									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal200()"
+										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+								</div>
+								<p>结果：<span id="re200"></span>&nbsp;&nbsp;<a onclick="qcal200()">清空</a></p>
+								总分160转100分制度并判断及格（96分及格）：
+								<div style="white-space: nowrap;">
+									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs160" type="number">
+									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal160()"
+										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+								</div>
+								<p>结果：<span id="re160"></span>&nbsp;&nbsp;<a onclick="qcal160()">清空</a></p>
+								总分150转100分制度并判断及格（90分及格）：
+								<div style="white-space: nowrap;">
+									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs150" type="number">
+									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal150()"
+										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+								</div>
+								<p>结果：<span id="re150"></span>&nbsp;&nbsp;<a onclick="qcal150()">清空</a></p>
+								总分120转100分制度并判断及格（72分及格）：
+								<div style="white-space: nowrap;">
+									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs120" type="number">
+									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal120()"
+										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+								</div>
+								<p>结果：<span id="re120"></span>&nbsp;&nbsp;<a onclick="qcal120()">清空</a></p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -200,9 +241,10 @@
 			<a href="#top" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
-		<script src="js/index.js"></script>
 		<script>
 			var tb = document.getElementById('inputbox');
+			var dt = new Date();
+			document.getElementById("cpyear3").innerHTML = dt.getFullYear();
 
 			function backspace() {
 				var ss = tb.selectionStart;
@@ -222,11 +264,52 @@
 				}
 			}
 
-			function xb() {
-				var long, resu;
-				long = document.getElementById("lon").value;
-				resu = (lon < 0.1) ? "恭喜你，是女的" : "恭喜你，是男的";
-				document.getElementById("result").innerHTML = resu;
+			function cal200() {
+				var fs = document.getElementById("fs200").value;
+				var jg = Number(fs) / 2;
+				var mess = (jg >= 60) ? "已经及格" : "未及格";
+				document.getElementById("re200").innerHTML = "转换成60分制为" + jg.toString() + "，且" + mess;
+			}
+
+			function qcal200() {
+				document.getElementById("fs200").value = '';
+				document.getElementById("re200").innerHTML = '';
+			}
+
+			function cal160() {
+				var fs1 = document.getElementById("fs160").value;
+				var jg1 = Math.round(Number(fs1) / 1.6);
+				var mess1 = (jg1 >= 60) ? "已经及格" : "未及格";
+				document.getElementById("re160").innerHTML = "转换成60分制为大约" + jg1.toString() + "，且" + mess1;
+			}
+
+			function qcal160() {
+				document.getElementById("fs160").value = '';
+				document.getElementById("re160").innerHTML = '';
+			}
+
+			function cal150() {
+				var fs2 = document.getElementById("fs150").value;
+				var jg2 = Math.round(Number(fs2) / 1.5);
+				var mess2 = (jg2 >= 60) ? "已经及格" : "未及格";
+				document.getElementById("re150").innerHTML = "转换成60分制为大约" + jg2.toString() + "，且" + mess2;
+			}
+
+			function qcal150() {
+				document.getElementById("fs150").value = '';
+				document.getElementById("re150").innerHTML = '';
+			}
+
+			function cal120() {
+				var fs3 = document.getElementById("fs120").value;
+				var jg3 = Math.round(Number(fs3) / 1.2);
+				var mess3 = (jg3 >= 60) ? "已经及格" : "未及格";
+				document.getElementById("re120").innerHTML = "转换成60分制为大约" + jg3.toString() + "，且" + mess3;
+			}
+
+			function qcal120() {
+				document.getElementById("fs120").value = '';
+				document.getElementById("re120").innerHTML = '';
 			}
 		</script>
 	</body>
