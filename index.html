@@ -307,12 +307,22 @@
 				</div>
 			</div>
 		</div>
+		<button class="mdui-fab mdui-fab-fixed mdui-ripple" id="up"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
 		<footer class="mdui-container-fluid">
 			<span>&copy;AMDISYES 2023~<span id="cpyear"></span>&nbsp;&nbsp;</span>
 			<a href="#top" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
 		<script>
+		// 当网页向下滑动 1px 出现"返回顶部" 按钮
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {console.log(121);
+                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                    document.getElementById("up").style.display = "block";
+                } else {
+                    document.getElementById("up").style.display = "none";
+                }
+            }
 			//获取年份
 			var dt = new Date();
 			document.getElementById("year").innerHTML = dt.getFullYear();
