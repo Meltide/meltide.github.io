@@ -201,12 +201,26 @@
 				</div>
 			</div>
 		</div>
+		<button class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-pink" id="up" onclick="up()"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
 		<footer class="mdui-container-fluid">
 			<span>&copy;AMDISYES 2023~<span id="cpyear1"></span>&nbsp;&nbsp;</span>
-			<a href="#top" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
+			<a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
 		<script>
+	    	//返回顶部
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {console.log(121);
+                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                    document.getElementById("up").style.display = "block";
+                } else {
+                    document.getElementById("up").style.display = "none";
+                }
+            }
+            function up() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
 			var dt = new Date();
 			document.getElementById("cpyear1").innerHTML = dt.getFullYear();
 		</script>
