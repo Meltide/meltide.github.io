@@ -70,3 +70,11 @@ footer a:visited {
 	margin-left: 12px;
 	font-weight: 700;
 }
+
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    border-radius: 50%;
+}
