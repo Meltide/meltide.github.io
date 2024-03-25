@@ -92,15 +92,14 @@
 					<div class="mdui-list-item-content">CPS测试</div>
 				</li>
 				<li class="mdui-subheader">友情链接</li>
-				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://high20212021.github.io')">
+				<li class="mdui-list-item mdui-ripple" onclick="window.open('http://yukati.yuqios.top/')">
 					<!--
 					<div class="avatarh mdui-m-r-2">
 						<span class="mdui-text-color-white mdui-typo-headline" style="padding-left: 6.7px;">H</span>
 					</div>
 					-->
-					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px;"
-						src="https://high20212021.github.io/highstudios.jpg"></mdui-avatar>
-					<div class="mdui-list-item-content">HighStudios</div>
+					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px; background-color: darkcyan; color: white;">Y</mdui-avatar>
+					<div class="mdui-list-item-content">Yukati的Arch软件园源</div>
 				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('http://lengshanyun.top')">
 					<!--
@@ -197,6 +196,17 @@
 								<button class="mdui-btn mdui-color-teal mdui-btn-icon"
 									onclick="document.getElementById('inputbox').value=''"><i
 										class="mdui-icon material-icons">&#xe0b8;</i></button>
+							</div>
+						</div>
+					</div>
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
+						<div class="mdui-card-primary">
+							<div class="mdui-card-primary-title">今日人品</div>
+							<div class="mdui-card-content mdui-typo">
+								<p id="rerp0"></p>
+								<button class="mdui-btn mdui-color-pink" onclick="rp()">点我</button>
+								<br>
+								注：仅供娱乐，请勿当真
 							</div>
 						</div>
 					</div>
@@ -328,6 +338,11 @@
 			function qcal120() {
 				document.getElementById("fs120").value = '';
 				document.getElementById("re120").innerHTML = '';
+			}
+			
+			function rp() {
+			    var rand = Math.round(Math.random()*100);
+			    document.getElementById("rerp0").innerHTML = rand;
 			}
 		</script>
 	</body>
