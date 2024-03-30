@@ -19,8 +19,8 @@
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
 		<style>
-		    .mdui-chip {
-			    background-color: white;
+			.mdui-chip {
+				background-color: white;
 			}
 		</style>
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -85,7 +85,9 @@
 						<span class="mdui-text-color-white mdui-typo-headline" style="padding-left: 6.7px;">H</span>
 					</div>
 					-->
-					<mdui-avatar style="height: 30px; width: 30px; margin-right: 16px; background-color: darkcyan; color: white;">Y</mdui-avatar>
+					<mdui-avatar
+						style="height: 30px; width: 30px; margin-right: 16px; background-color: darkcyan; color: white;">
+						Y</mdui-avatar>
 					<div class="mdui-list-item-content">Yukati的Arch软件园源</div>
 				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('http://lengshanyun.top')">
@@ -100,7 +102,8 @@
 				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('http://minqwq.github.io')">
 					<mdui-avatar
-						style="height: 30px; width: 30px; margin-right: 16px; background-color: brown; color: white;">M</mdui-avatar>
+						style="height: 30px; width: 30px; margin-right: 16px; background-color: brown; color: white;">M
+					</mdui-avatar>
 					<div class="mdui-list-item-content">minqwq 个人网站</div>
 				</li>
 				<li class="mdui-subheader">吃水不忘挖井人</li>
@@ -126,8 +129,8 @@
 			<div class="mdui-dialog-content">请选择你想要去的页面</div>
 			<div class="mdui-dialog-actions">
 				<button class="mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/old'"">2023年的AMDISYES-Blog</button>
-				<button class="mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/past'"">2022年的AMDISYES-Blog</button>
-				<button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+				<button class=" mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/past'"">2022年的AMDISYES-Blog</button>
+				<button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
 			</div>
 		</div>
 		<div class="mdui-dialog" id="avatar">
@@ -143,20 +146,20 @@
 			</div>
 		</div>
 		<noscript>
-		    <div class="mdui-color-red" style="padding: 8px;">
-		        <p class="mdui-typo-display-1"><b>JavaScript未开启</b></p>
-		        <p class="mdui-typo-body-2">
-		            由于MDUI高度依赖JavaScript，并且部分功能使用了JavaScript，因此许多组件无法正常使用，例如：
-		            <br>
-		            <ul>
-		                <li>搜索框的搜索功能</li>
-		                <li>日期和一言</li>
-		                <li>一键返回顶部</li>
-		                <li>功能抽屉</li>
-		            </ul>
-		        </p>
-		        <p class="mdui-typo-body-2">请检查浏览器设置或F12菜单中“禁用JavaScript”选项是否开启</p>
-		    </div>
+			<div class="mdui-color-red" style="padding: 8px;">
+				<p class="mdui-typo-display-1"><b>JavaScript未开启</b></p>
+				<p class="mdui-typo-body-2">
+					由于MDUI高度依赖JavaScript，并且部分功能使用了JavaScript，因此许多组件无法正常使用，例如：
+					<br>
+				<ul>
+					<li>搜索框的搜索功能</li>
+					<li>日期和一言</li>
+					<li>一键返回顶部</li>
+					<li>功能抽屉</li>
+				</ul>
+				</p>
+				<p class="mdui-typo-body-2">请检查浏览器设置或F12菜单中“禁用JavaScript”选项是否开启</p>
+			</div>
 		</noscript>
 		<marquee class="banner mdui-color-cyan mdui-text-color-white">2024-3-27网站公告：更改了文章图片显示方式，更省流；添加了二十四节气表</marquee>
 		<div class="mdui-container" id="top">
@@ -165,15 +168,19 @@
 					<span class="mdui-typo-display-2"><b>AMDISYES</b></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe192;</i>
-					<span class="mdui-m-t-2 mdui-typo-body-2 box"><noscript class="mdui-text-color-red">时间不可用，因为JavaScript已禁用</noscript></span>
+					<span class="mdui-m-t-2 mdui-typo-body-2 box"><noscript
+							class="mdui-text-color-red">时间不可用，因为JavaScript已禁用</noscript></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
-					<span id="year" class="mdui-typo-body-2"></span><span class="mdui-m-t-2 mdui-typo-body-2" id="date"><noscript class="mdui-text-color-red">日期不可用，因为JavaScript已禁用</noscript></span>
+					<span id="year" class="mdui-typo-body-2"></span><span class="mdui-m-t-2 mdui-typo-body-2"
+						id="date"><noscript class="mdui-text-color-red">日期不可用，因为JavaScript已禁用</noscript></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe0c9;</i>
-					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="from"></span><noscript class="mdui-text-color-red">一言不可用，因为JavaScript已禁用</noscript></span>
+					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="from"></span><noscript
+							class="mdui-text-color-red">一言不可用，因为JavaScript已禁用</noscript></span>
 					<br>
-					<div id="tp-weather-widget" mdui-tooltip="{content: '点击看详情'}"><noscript class="mdui-text-color-red mdui-typo-body-2">天气不可用，因为JavaScript已禁用</noscript></div>
+					<div id="tp-weather-widget" mdui-tooltip="{content: '点击看详情'}"><noscript
+							class="mdui-text-color-red mdui-typo-body-2">天气不可用，因为JavaScript已禁用</noscript></div>
 					<br>
 					<form onsubmit="return search()" class="mdui-m-b-2" style="white-space: nowrap;">
 						<input type="text" class="searchbox mdui-shadow-3 mdui-m-t-1 mdui-m-b-1" autocomplete="off"
@@ -190,8 +197,8 @@
 				</div>
 			</div>
 			<div class="mdui-m-b-2 mdui-typo">
-			    <span class="mdui-typo-body-2">网站累计被访问次数<br></span>
-			    <img class="mdui-img-fluid" src="https://count.himiku.com/get/@huakaifg24?theme=moebooru">
+				<span class="mdui-typo-body-2">网站累计被访问次数<br></span>
+				<img class="mdui-img-fluid" src="https://count.himiku.com/get/@huakaifg24?theme=moebooru">
 			</div>
 		</div>
 		<div class="mdui-divider"></div>
@@ -239,20 +246,40 @@
 				</div>
 			</div>
 		</div>
-        <script>
-            (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-            window.SeniverseWeatherWidget('show', {
-                flavor: "slim",
-                location: "WTN75JN9H56X",
-                geolocation: true,
-                language: "zh-Hans",
-                unit: "c",
-                theme: "auto",
-                token: "4595f371-fbcb-49ee-886f-8f1d68f35334",
-                hover: "enabled",
-                container: "tp-weather-widget"
-            })
-        </script>
+		<script>
+			(function(a, h, g, f, e, d, c, b) {
+				b = function() {
+					d = h.createElement(g);
+					c = h.getElementsByTagName(g)[0];
+					d.src = e;
+					d.charset = "utf-8";
+					d.async = 1;
+					c.parentNode.insertBefore(d, c)
+				};
+				a["SeniverseWeatherWidgetObject"] = f;
+				a[f] || (a[f] = function() {
+					(a[f].q = a[f].q || []).push(arguments)
+				});
+				a[f].l = +new Date();
+				if (a.attachEvent) {
+					a.attachEvent("onload", b)
+				} else {
+					a.addEventListener("load", b, false)
+				}
+			}(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
+				parseInt((new Date().getTime() / 100000000).toString(), 10)));
+			window.SeniverseWeatherWidget('show', {
+				flavor: "slim",
+				location: "WTN75JN9H56X",
+				geolocation: true,
+				language: "zh-Hans",
+				unit: "c",
+				theme: "auto",
+				token: "4595f371-fbcb-49ee-886f-8f1d68f35334",
+				hover: "enabled",
+				container: "tp-weather-widget"
+			})
+		</script>
 		<div class="mdui-divider"></div>
 		<div class="mdui-container mdui-m-t-3">
 			<p class="mdui-typo-headline"><b>我的项目</b></p>
@@ -275,24 +302,25 @@
 								<b>访问密码：2nk4</b>
 							</div>
 							<div class="mdui-card-actions">
-								<div class="mdui-btn mdui-color-pink" onclick="window.open('https://amdisyes.lanzouk.com/b02q2sxli')">下载</div>
+								<div class="mdui-btn mdui-color-pink"
+									onclick="window.open('https://amdisyes.lanzouk.com/b02q2sxli')">下载</div>
 								<div class="mdui-btn mdui-color-pink" mdui-dialog="{target: '#seold'}">旧版本</div>
 								<div class="mdui-dialog" id="seold">
-                                        <div class="mdui-dialog-content">
-                                            <span class="mdui-typo-headline"><b>访问密码：9hsy</b></span>
-                                            <br>
-                                            <span class="mdui-text-color-red mdui-typo-body-2">注意：旧版本可能存在功能缺失、有bug等问题</span>
-                                        </div>
-                                        <div class="mdui-dialog-actions">
-                                            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
-                                            <button class="mdui-btn mdui-ripple" onclick="window.open('https://amdisyes.lanzouj.com/b02q2rp9c')">带我去</button>
-                                        </div>
-                                        </div>
-                                        </div>
-                                </div>
-                            </div>
+									<div class="mdui-dialog-content">
+										<span class="mdui-typo-headline"><b>访问密码：9hsy</b></span>
+										<br>
+										<span class="mdui-text-color-red mdui-typo-body-2">注意：旧版本可能存在功能缺失、有bug等问题</span>
+									</div>
+									<div class="mdui-dialog-actions">
+										<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+										<button class="mdui-btn mdui-ripple"
+											onclick="window.open('https://amdisyes.lanzouj.com/b02q2rp9c')">带我去</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
 					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">CQ Chatroom</div>
@@ -307,6 +335,7 @@
 								<div class="mdui-btn mdui-color-pink"
 									onclick="window.open('https://amdisyes.lanzouk.com/b02ql6pab')">下载服务端</div>
 							</div>
+						</div>
 					</div>
 				</div>
 				<div class="mdui-col-sm-6">
@@ -355,7 +384,8 @@
 							</div>
 							<div class="mdui-card-actions">
 								<div class="mdui-btn mdui-color-pink"
-									onclick="window.open('http://mcsungou.ysepan.com')">访问</div>
+									onclick="window.open('http://mcsungou.ysepan.com')">访问
+								</div>
 							</div>
 						</div>
 					</div>
@@ -364,87 +394,134 @@
 		</div>
 		<div class="mdui-divider"></div>
 		<div class="mdui-container mdui-m-t-3">
-		    <div class="mdui-card mdui-ripple mdui-m-b-2">
-		        <div class="mdui-card-primary">
-		            <div class="mdui-card-primary-title">中国传统节日一览表</div>
-		            <div class="mdui-card-content mdui-typo">
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月初一 春节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月十五 元宵节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历二月初二 龙抬头</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历三月初三 上巳节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明前一天 寒食节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历4月5日前后 清明节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历五月初五 端午节</span></div>
-	                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月初七 七夕节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月十五 中元节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历八月十五 中秋节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历九月初九 重阳节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月初一 寒衣节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月十五 下元节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历12月21日前后 冬至节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月初八 腊八节</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月二十三 小年</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月最后一天 除夕</span></div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="mdui-card mdui-ripple mdui-m-b-2">
-		        <div class="mdui-card-primary">
-		            <div class="mdui-card-primary-title">二十四节气</div>
-		            <div class="mdui-card-content mdui-typo">
-		                <div class="mdui-headline"><b>春季</b></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立春 2月3-5日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">雨水 2月18-20日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">惊蛰 3月5-7日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">春分 3月20-22日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明 4月4-6日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">谷雨 4月19-21日</span></div>
-		                <div class="mdui-headline"><b>夏季</b></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立夏 5月5-7日</span></div>
-	                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小满 5月20-27日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">芒种 6月5-7日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">夏至 6月21-22日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小暑 7月6-8日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大暑 7月22-24日</span></div>
-		                <div class="mdui-headline"><b>秋季</b></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立秋 8月7-9日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">处暑 8月22-24日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">白露 9月7-9日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">秋分 9月22-24日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">寒露 10月8-9日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">霜降 10月24-24日</span></div>
-		                <div class="mdui-headline"><b>冬季</b></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立冬 11月7-8日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小雪 11月22-23日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大雪 12月6-8日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">冬至 12月21-23日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小寒 1月5-7日</span></div>
-		                <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大寒 1月20-21日</span></div>
-		            </div>
-		        </div>
-		    </div>
+			<div class="mdui-card mdui-ripple mdui-m-b-2">
+				<div class="mdui-card-primary">
+					<div class="mdui-card-primary-title">中国传统节日一览表</div>
+					<div class="mdui-card-content mdui-typo">
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月初一
+								春节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月十五
+								元宵节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历二月初二
+								龙抬头</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历三月初三
+								上巳节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明前一天
+								寒食节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历4月5日前后
+								清明节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历五月初五
+								端午节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月初七
+								七夕节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月十五
+								中元节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历八月十五
+								中秋节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历九月初九
+								重阳节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月初一
+								寒衣节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月十五
+								下元节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历12月21日前后
+								冬至节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月初八
+								腊八节</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月二十三
+								小年</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月最后一天
+								除夕</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="mdui-card mdui-ripple mdui-m-b-2">
+				<div class="mdui-card-primary">
+					<div class="mdui-card-primary-title">二十四节气</div>
+					<div class="mdui-card-content mdui-typo">
+						<div class="mdui-headline"><b>春季</b></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立春
+								2月3-5日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">雨水
+								2月18-20日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">惊蛰
+								3月5-7日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">春分
+								3月20-22日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明
+								4月4-6日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">谷雨
+								4月19-21日</span></div>
+						<div class="mdui-headline"><b>夏季</b></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立夏
+								5月5-7日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小满
+								5月20-27日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">芒种
+								6月5-7日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">夏至
+								6月21-22日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小暑
+								7月6-8日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大暑
+								7月22-24日</span></div>
+						<div class="mdui-headline"><b>秋季</b></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立秋
+								8月7-9日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">处暑
+								8月22-24日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">白露
+								9月7-9日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">秋分
+								9月22-24日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">寒露
+								10月8-9日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">霜降
+								10月24-24日</span></div>
+						<div class="mdui-headline"><b>冬季</b></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立冬
+								11月7-8日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小雪
+								11月22-23日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大雪
+								12月6-8日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">冬至
+								12月21-23日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小寒
+								1月5-7日</span></div>
+						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大寒
+								1月20-21日</span></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--<a href="https://icp.gov.moe/?keyword=20242008" target="_blank">萌ICP备20242008号</a>-->
-		<button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
+		<button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i
+				class="mdui-icon material-icons">&#xe5d8;</i></button>
 		<footer class="mdui-container-fluid">
 			<span>&copy;AMDISYES 2023~<span id="cpyear"></span>&nbsp;&nbsp;</span>
 			<a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 		</footer>
 		<script>
-		    //返回顶部
-            window.onscroll = function() {scrollFunction()};
-            function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-                    document.getElementById("up").style.display = "block";
-                } else {
-                    document.getElementById("up").style.display = "none";
-                }
-            }
-            function up() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
+			//返回顶部
+			window.onscroll = function() {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				console.log(121);
+				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+					document.getElementById("up").style.display = "block";
+				} else {
+					document.getElementById("up").style.display = "none";
+				}
+			}
+
+			function up() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
 			//获取年份
 			var dt = new Date();
 			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
@@ -494,18 +571,18 @@
 			}
 			//获取时间
 			function getTime() {
-                var date = new Date();
-                var hour = date.getHours(); //获取小时
-                hour = hour < 10 ? '0' + hour : hour;
-                var minute = date.getMinutes(); // 获取分
-                minute = minute < 10 ? '0' + minute : minute;
-                var seconds = date.getSeconds(); //获取秒
-                seconds = seconds < 10 ? '0' + seconds : seconds;
-                return hour + ':' + minute + ':' + seconds;
-            }
-            setInterval(function() {
-                document.querySelector('.box').innerHTML = getTime();
-            }, 1000) 
+				var date = new Date();
+				var hour = date.getHours(); //获取小时
+				hour = hour < 10 ? '0' + hour : hour;
+				var minute = date.getMinutes(); // 获取分
+				minute = minute < 10 ? '0' + minute : minute;
+				var seconds = date.getSeconds(); //获取秒
+				seconds = seconds < 10 ? '0' + seconds : seconds;
+				return hour + ':' + minute + ':' + seconds;
+			}
+			setInterval(function() {
+				document.querySelector('.box').innerHTML = getTime();
+			}, 1000)
 			//鼠标点击特效
 			var a_idx = 0;
 			jQuery(document).ready(function($) {
