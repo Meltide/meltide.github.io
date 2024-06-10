@@ -167,7 +167,11 @@
 				<p class="mdui-typo-body-2">请检查浏览器设置或F12菜单中“禁用JavaScript”选项是否开启</p>
 			</div>
 		</noscript>
-		<marquee class="banner mdui-color-red mdui-text-color-white">祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！仁慈的上帝会祝福你们的，相信自己，一定能行！</marquee>
+	    <div class="mdui-color-red" style="padding: 8px;">
+	        <p class="mdui-typo-body-2">距离浙江中考还有：</p>
+			<p class="mdui-typo-display-1 countdown"><b>10</b></p>
+		</div>
+		<marquee class="banner mdui-color-red mdui-text-color-white">祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！</marquee>
 		<div class="mdui-container" id="top">
 			<div class="mdui-row" style="padding-top: 14px;">
 				<div class="mdui-col-xs-9 mdui-col-sm-10 mdui-col-lg-11">
@@ -615,7 +619,48 @@
 					});
 				});
 			});
+			var targetDate = new Date("2024-06-22T06:30:00");
+
+    // 更新倒计时
+    function updateCountdown() {
+      var now = new Date();
+      var timeLeft = targetDate - now;
+
+      // 计算剩余的天、小时、分钟和秒
+      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      // 更新页面上的倒计时显示
+      document.querySelector(".countdown").textContent = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+
+      // 每秒钟更新一次倒计时
+      setTimeout(updateCountdown, 1000);
+    }
+
+    // 启动倒计时
+    updateCountdown();
 		</script>
+		<style>
+    .countdown {
+      /*font-size: 36px;*/
+      text-align: center;
+      /*animation: countdown-animation 1s infinite;*/
+    }
+/*
+    @keyframes countdown-animation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }*/
+		</style>
 	</body>
 </html>
 <!--
