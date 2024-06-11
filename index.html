@@ -16,29 +16,56 @@
                 src: url('fonts/宋体.ttf')
                 format('truetype');
             }
+            .footer {
+                a {
+                    color:white;
+                }
+                a:visited {
+                    color:white;
+                }
+            }
+            body {
+                color:white;
+            }
+            .countdown { font-size: 36px; text-align: center; animation: countdown-animation 1s infinite; } @keyframes countdown-animation { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
 		</style>
         <title>AMDISYES-Home</title>
     </head>
-    <body style="font-family:宋体;">
+    <body background="bg32.png" style="font-family:宋体;">
         <marquee style="background-color:black;color:red;">
             祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！
         </marquee>
         <center>
-            <div style="font-size:28px;padding-top:20px;padding-bottom:20px"><b>AMDISYES的个人主页</b>
+            <div style="font-size:28px;padding-top:20px;padding-bottom:20px">
+                <b>AMDISYES的个人主页</b>
             </div>
-            <div id="hitokoto" style="font-size:14px;padding-bottom:10px;">
-                <span id="from">一切帝国主义和反动派都是纸老虎。--毛泽东</span>
+            <div id="hitokoto" style="font-size:14px;padding-bottom:10px;"><span id="from">一切帝国主义和反动派都是纸老虎。--毛泽东</span>
             </div>
         </center>
         <hr>
-        <details style="padding:3px;">
-            <summary>网站地图</summary>
-            <ul>
-                <li><a href="articles.html">文章</a></li>
-                <li><a href="downs.html">下载</a></li>
-                <li><a href="index1.html">回旧版</a></li>
-            </ul>
-        </details>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="padding-right:20px;">
+                        <details style="padding:3px;"><summary>网站地图</summary>
+                            <ul>
+                              <li><a href="articles.html">文章</a></li>
+                              <li><a href="downs.html">下载</a></li>
+                              <li><a href="cps.html">CPS测试</a></li>
+                            </ul>
+                        </details></td>
+                    <td style="padding-left:20px;">
+                        <details style="padding:3px;"><summary>友情链接</summary>
+                            <ul>
+                              <li><a href="https://high20212021.github.io/" target="_blank">Yukati's ArchLinux Repo</a></li>
+                              <li><a href="https://www.minqwq.us.kg/" target="_blank">minqwq 个人网站</a></li>
+                              <li><a href="https://lengshanyun.top/" target="_blank">CoreStudio</a></li>
+                              <li><a href="https://bibimingming.github.io/MCPE014.github.io/" target="_blank">MCPE0.14 速通</a></li>
+                            </ul>
+                        </details></td>
+                </tr>
+            </tbody>
+        </table>
         <hr>
         <div style="padding-top:10px">
             当前时间： <span class="timebox">加载中...</span>
@@ -46,10 +73,9 @@
         <div>
             今天是： <span id="year"></span><span id="date">未知</span>
         </div>
-        <p style="color:red;">距离中考仅剩<span id="countdown"></span></p>
+        <p style="color:red;">距离中考仅剩<span class="countdown"></span></p>
         <div id="tp-weather-widget"></div>
-        <form onsubmit="return search()" style="white-space:nowrap;padding-top:12px;">
-            <input type="text" autocomplete="off" id="search_input" placeholder="必应搜索..." style="height:18px;"> <button onclick="return search()">搜索</button>
+        <form onsubmit="return search()" style="white-space:nowrap;padding-top:12px;"><input type="text" autocomplete="off" id="search_input" placeholder="必应搜索..." style="height:18px;"> <button onclick="return search()">搜索</button>
         </form>
         <p>网站访问总次数：<br><img src="https://count.himiku.com/get/@huakaifg24?theme=moebooru" style="padding-top:5px;"></p> <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
         <hr>
@@ -75,7 +101,80 @@
         </ul>
         <hr>
         <h2>我的项目</h2>
-        
+        <h2>Stream Client</h2>
+        <div style="color:red;">
+            <b>AMDISYES的最新0.14客户端！</b>
+        </div>
+        <div>
+            相比于原版的特点：
+        </div>
+        <div style="padding-left:15px;">
+            <li>首发Color Texture 2.0（JadChina制作）</li>
+            <li>扁平化了大部分的界面和图标，重制主界面</li>
+            <li>重绘大部分图标，大量采用高清图标资源</li>
+            <li>简洁的方向键和半透明物品栏</li>
+            <li>相比原版体积缩小了约20%</li>
+            <li>HUD面板和伪装Vape Logo</li>
+        </div> <b>访问密码：2nk4</b> <button href="https://amdisyes.lanzouk.com/b02q2sxli">下载</button>
+        <hr>
+        <h2>中国传统节日一览表</h2>
+        <li>农历正月初一 春节</li>
+        <li>农历正月十五 元宵节</li>
+        <li>农历二月初二 龙抬头</li>
+        <li>农历三月初三 上巳节</li>
+        <li>清明前一天 寒食节</li>
+        <li>公历4月5日前后 清明节</li>
+        <li>农历五月初五 端午节</li>
+        <li>农历七月初七 七夕节</li>
+        <li>农历七月十五 中元节</li>
+        <li>农历八月十五 中秋节</li>
+        <li>农历九月初九 重阳节</li>
+        <li>农历十月初一 寒衣节</li>
+        <li>农历十月十五 下元节</li>
+        <li>公历12月21日前后 冬至节</li>
+        <li>农历腊月初八 腊八节</li>
+        <li>农历腊月二十三 小年</li>
+        <li>农历腊月最后一天 除夕</li>
+        <h2>二十四节气一览表</h2>
+        <h3>春季</h3>
+        <li>立春 2月3-5日</li>
+        <li>雨水 2月18-20日</li>
+        <li>惊蛰 3月5-7日</li>
+        <li>春分 3月20-22日</li>
+        <li>清明 4月4-6日</li>
+        <li>谷雨 4月19-21日</li>
+        <h3>夏季</h3>
+        <li>立夏 5月5-7日</li>
+        <li>小满 5月20-27日</li>
+        <li>芒种 6月5-7日</li>
+        <li>夏至 6月21-22日</li>
+        <li>小暑 7月6-8日</li>
+        <li>大暑 7月22-24日</li>
+        <h3>秋季</h3>
+        <li>立秋 8月7-9日</li>
+        <li>处暑 8月22-24日</li>
+        <li>白露 9月7-9日</li>
+        <li>秋分 9月22-24日</li>
+        <li>寒露 10月8-9日</li>
+        <li>霜降 10月24-24日</li>
+        <h3>冬季</h3>
+        <li>立冬 11月7-8日</li>
+        <li>小雪 11月22-23日</li>
+        <li>大雪 12月6-8日</li>
+        <li>冬至 12月21-23日</li>
+        <li>小寒 1月5-7日</li>
+        <li>大寒 1月20-21日</li>
+        <hr>
+        <div style="background-color:black;color:white;" class="footer">
+            &copy;AMDISYES 2022-2024
+            <br>
+            <a href="index1.html">回旧版</a>
+            <a href="http://amdisyes.xlphp.net/old">2023年版</a>
+            <a href="http://amdisyes.xlphp.net/past">2022年版</a>
+            <br>
+            <a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/big/56" alt="wapmz.com"></a>
+            &nbsp;&nbsp;&nbsp;<a onclick="up()">[带我回顶部]</a>
+        </div>
         <script>
             //返回顶部
 			window.onscroll = function() {
@@ -227,7 +326,7 @@
       var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       // 更新页面上的倒计时显示
-      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+      document.querySelector(".countdown").textContent = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
 
       // 每秒钟更新一次倒计时
       setTimeout(updateCountdown, 1000);
