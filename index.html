@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" name="AMDISYES的个人主页">
+        <meta name="keywords" name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        <link href="img/favoricon.png" rel="shortcut icon"> <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> <!--[if lt IE 9]>
+		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <title>AMDISYES-Home</title>
+    </head>
+    <body>
+        <marquee style="background-color:black;color:red;">
+            祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！
+        </marquee>
+        <center>
+            <div style="font-size:28px;padding-top:20px;padding-bottom:20px">
+                <b>AMDISYES的个人主页</b>
+            </div>
+            <div id="hitokoto" style="font-size:14px;padding-bottom:10px;"><span id="from"></span>
+                <noscript style="color:red;">
+                    一言不可用，因为JavaScript已禁用
+                </noscript>
+            </div>
+        </center>
+        <hr>
+        <p>当前时间： <span id="box">
+                <noscript style="color:red;">
+                    时间不可用，因为JavaScript已禁用
+                </noscript> </span></p>
+        <script>
+            //一言
+			var xhr = new XMLHttpRequest();
+			xhr.open('get', 'https://v1.hitokoto.cn/?c=b');
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4) {
+					var data = JSON.parse(xhr.responseText);
+					var hitokoto = document.getElementById('hitokoto');
+					var fromm = document.getElementById("from")
+					fromm.innerText = data.from;
+					hitokoto.innerText = data.hitokoto;
+				}
+			}
+			xhr.send();
+			//获取年份
+			var dt = new Date();
+			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
+			document.getElementById("cpyear").innerHTML = dt.getFullYear();
+			//必应搜索
+			function search() {
+				if (document.getElementById("search_input").value != "") {
+					window.location.href = "https://cn.bing.com/search?q=" + document.getElementById("search_input").value;
+					document.getElementById("search_input").value = "";
+				}
+				return false;
+			}
+			//获取日期
+			var ThisNowDate = new Date();
+			if (document.getElementById("date")) {
+				if (ThisNowDate.getDay() == 1)
+					var Weeks = '星期一'
+				else if (ThisNowDate.getDay() == 2)
+					var Weeks = '星期二'
+				else if (ThisNowDate.getDay() == 3)
+					var Weeks = '星期三'
+				else if (ThisNowDate.getDay() == 4)
+					var Weeks = '星期四'
+				else if (ThisNowDate.getDay() == 5)
+					var Weeks = '星期五'
+				else if (ThisNowDate.getDay() == 6)
+					var Weeks = '星期六'
+				else if (ThisNowDate.getDay() == 0)
+					var Weeks = '星期日'
+				document.getElementById('date').innerHTML = ThisNowDate.getMonth() + 1 +
+					'月' +
+					ThisNowDate.getDate() + '日' + ' ' +
+					Weeks;
+			}
+			//获取时间
+			function getTime() {
+				var date = new Date();
+				var hour = date.getHours(); //获取小时
+				hour = hour < 10 ? '0' + hour : hour;
+				var minute = date.getMinutes(); // 获取分
+				minute = minute < 10 ? '0' + minute : minute;
+				var seconds = date.getSeconds(); //获取秒
+				seconds = seconds < 10 ? '0' + seconds : seconds;
+				return hour + ':' + minute + ':' + seconds;
+			}
+			setInterval(function() {
+				document.querySelector('.box').innerHTML = getTime();
+			}, 1000)
+			//鼠标点击特效
+			var a_idx = 0;
+			jQuery(document).ready(function($) {
+				$("body").click(function(e) {
+					var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+					var $i = $("<span/>").text(a[a_idx]);
+					a_idx = (a_idx + 1) % a.length;
+					var x = e.pageX,
+						y = e.pageY;
+					$i.css({
+						"z-index": 100000000,
+						"top": y - 20,
+						"left": x,
+						"position": "absolute",
+						"font-weight": "bold",
+						"color": "#ff6651"
+					});
+					$("body").append($i);
+					$i.animate({
+						"top": y - 180,
+						"opacity": 0
+					}, 1500, function() {
+						$i.remove();
+					});
+				});
+			});
+        </script>
+    </body>
+</html>
