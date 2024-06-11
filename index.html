@@ -10,9 +10,16 @@
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+        <style>
+            @font-face {
+                font-family: '宋体';
+                src: url('fonts/宋体.ttf')
+                format('truetype');
+            }
+		</style>
         <title>AMDISYES-Home</title>
     </head>
-    <body>
+    <body style="font-family:宋体;">
         <marquee style="background-color:black;color:red;">
             祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！
         </marquee>
@@ -24,14 +31,47 @@
             </div>
         </center>
         <hr>
+        <details style="padding:3px;">
+            <summary>网站地图</summary>
+            <ul>
+                <li><a href="articles.html">文章</a></li>
+                <li><a href="downs.html">下载</a></li>
+            </ul>
+        </details>
+        <hr>
         <div style="padding-top:10px">
-            当前时间： <span id="timebox">未知</span>
+            当前时间： <span class="timebox">加载中...</span>
         </div>
         <div>
-            今天是： <span id="date">未知</span>
+            今天是： <span id="year"></span><span id="date">未知</span>
         </div>
+        <p style="color:red;">距离中考仅剩<span id="countdown"></span></p>
         <div id="tp-weather-widget"></div>
-        <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
+        <form onsubmit="return search()" style="white-space:nowrap;padding-top:12px;">
+            <input type="text" autocomplete="off" id="search_input" placeholder="必应搜索..." style="height:18px;"> <button onclick="return search()">搜索</button>
+        </form>
+        <p>网站访问总次数：<br><img src="https://count.himiku.com/get/@huakaifg24?theme=moebooru" style="padding-top:5px;"></p> <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
+        <hr>
+        <h2>关于我&nbsp;&nbsp;<img src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&amp;spec=640&amp;img_type=jpg" style="height:30px;width:30px;"></h2>
+        <ul>
+            <li>QQ：3480656548</li>
+            <li>B站：<a href="https://space.bilibili.com/57690791">AMDISYES</a></li>
+            <li>Github：<a href="https://github.com/AMDISYES">AMDISYES</a></li>
+            <li>Telegram：<a href="https://t.me/amdisyes">@amdisyes</a></li>
+            <li>邮箱1：3480656548@qq.com</li>
+            <li>邮箱2：amdisyes@outlook.com</li>
+            <li>邮箱3：amdisyes@126.com</li>
+        </ul>
+        <hr>
+        <h2>关于本网站</h2>
+        <ul>
+            <li>AMDISYES编写了100%的网站</li>
+            <li>网站使用HTML5技术</li>
+            <li>网站使用字体: 宋体</li>
+            <li>获取QQ头像的API来自腾讯云开发者社区</li>
+            <li>一言API(Hitokoto)由知乎大佬给出</li>
+            <li>本项目仓库：<a href="https://github.com/AMDISYES/amdisyes.github.io">点击前往</a><br><del>能不能给我点个star...</del></li>
+        </ul>
         <script>
             //返回顶部
 			window.onscroll = function() {
@@ -51,10 +91,6 @@
 				document.body.scrollTop = 0;
 				document.documentElement.scrollTop = 0;
 			}
-			//获取年份
-			var dt = new Date();
-			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
-			document.getElementById("cpyear").innerHTML = dt.getFullYear();
 			//必应搜索
 			function search() {
 				if (document.getElementById("search_input").value != "") {
@@ -110,7 +146,7 @@
 				return hour + ':' + minute + ':' + seconds;
 			}
 			setInterval(function() {
-				document.getElementById('timebox').innerHTML = getTime();
+				document.querySelector('.timebox').innerHTML = getTime();
 			}, 1000)
 			//鼠标点击特效
 			var a_idx = 0;
@@ -171,6 +207,35 @@
 				hover: "enabled",
 				container: "tp-weather-widget"
 			})
+			
+			// 目标日期
+    var targetDate = new Date("2024-06-22T00:00:00");
+
+    // 更新倒计时
+    function updateCountdown() {
+      var now = new Date();
+      var timeLeft = targetDate - now;
+
+      // 计算剩余的天、小时、分钟和秒
+      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      // 更新页面上的倒计时显示
+      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+
+      // 每秒钟更新一次倒计时
+      setTimeout(updateCountdown, 1000);
+    }
+
+    // 启动倒计时
+    updateCountdown();
+			
+			//获取年份
+			var dt = new Date();
+			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
+			document.getElementById("cpyear").innerHTML = dt.getFullYear();
         </script>
         <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     </body>
