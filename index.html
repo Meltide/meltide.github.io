@@ -28,24 +28,29 @@
             </div>
         </center>
         <hr>
-        <p>当前时间： <span id="box">
+        <p>当前时间： <span class="box">
                 <noscript style="color:red;">
                     时间不可用，因为JavaScript已禁用
                 </noscript> </span></p>
         <script>
-            //一言
-			var xhr = new XMLHttpRequest();
-			xhr.open('get', 'https://v1.hitokoto.cn/?c=b');
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState === 4) {
-					var data = JSON.parse(xhr.responseText);
-					var hitokoto = document.getElementById('hitokoto');
-					var fromm = document.getElementById("from")
-					fromm.innerText = data.from;
-					hitokoto.innerText = data.hitokoto;
+            //返回顶部
+			window.onscroll = function() {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				console.log(121);
+				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+					document.getElementById("up").style.display = "block";
+				} else {
+					document.getElementById("up").style.display = "none";
 				}
 			}
-			xhr.send();
+
+			function up() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
 			//获取年份
 			var dt = new Date();
 			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
@@ -58,6 +63,19 @@
 				}
 				return false;
 			}
+			//一言
+			var xhr = new XMLHttpRequest();
+			xhr.open('get', 'https://v1.hitokoto.cn/?c=b');
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4) {
+					var data = JSON.parse(xhr.responseText);
+					var hitokoto = document.getElementById('hitokoto');
+					var fromm = document.getElementById("from")
+					fromm.innerText = data.from;
+					hitokoto.innerText = data.hitokoto;
+				}
+			}
+			xhr.send();
 			//获取日期
 			var ThisNowDate = new Date();
 			if (document.getElementById("date")) {
