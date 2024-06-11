@@ -28,10 +28,11 @@
             </div>
         </center>
         <hr>
-        <p>当前时间： <span class="box">
+        <p>当前时间： <span class="timebox">
                 <noscript style="color:red;">
                     时间不可用，因为JavaScript已禁用
                 </noscript> </span></p>
+        <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
         <script>
             //返回顶部
 			window.onscroll = function() {
@@ -110,7 +111,7 @@
 				return hour + ':' + minute + ':' + seconds;
 			}
 			setInterval(function() {
-				document.querySelector('.box').innerHTML = getTime();
+				document.getElementById('timebox').innerHTML = getTime();
 			}, 1000)
 			//鼠标点击特效
 			var a_idx = 0;
