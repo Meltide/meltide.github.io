@@ -16,6 +16,7 @@
 		<link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
 		<script src="js/mdui.min.js"></script>
+		<script src="js/countdown.min.js"></script>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
 		<style>
@@ -169,7 +170,7 @@
 		</noscript>
 		<div class="mdui-color-red" style="padding: 8px;">
 			<p class="mdui-typo-body-2">距离浙江中考仅剩：</p>
-			<p class="mdui-typo-display-1" id="countdown"><b>?天 ?小时 ?分钟 ?秒</b></p>
+			<p class="mdui-typo-display-1" id="countdown0721"><b>?天 ?小时 ?分钟 ?秒</b></p>
 		</div>
 		<marquee class="banner mdui-color-red mdui-text-color-white">祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！</marquee>
 		<div class="mdui-container" id="top">
@@ -624,26 +625,14 @@
 			// 目标日期
     var targetDate = new Date("2024-06-22T00:00:00");
 
-    // 更新倒计时
-    function updateCountdown() {
-      var now = new Date();
-      var timeLeft = targetDate - now;
-
-      // 计算剩余的天、小时、分钟和秒
-      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
+    // 创建倒计时实例
+    var countdown = new Countdown(targetDate, function (timeLeft) {
       // 更新页面上的倒计时显示
-      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
-
-      // 每秒钟更新一次倒计时
-      setTimeout(updateCountdown, 1000);
-    }
+      document.getElementById("countdown0721").innerHTML = timeLeft.days + "天 " + timeLeft.hours + "小时 " + timeLeft.minutes + "分钟 " + timeLeft.seconds + "秒";
+    });
 
     // 启动倒计时
-    updateCountdown();
+    countdown.start();
 		</script>
 	</body>
 </html>
