@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="description" name="AMDISYES的个人主页">
         <meta name="keywords" name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
-        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
         <link href="img/favoricon.png" rel="shortcut icon"> <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> <!--[if lt IE 9]>
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -18,20 +17,20 @@
             祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！
         </marquee>
         <center>
-            <div style="font-size:28px;padding-top:20px;padding-bottom:20px">
-                <b>AMDISYES的个人主页</b>
+            <div style="font-size:28px;padding-top:20px;padding-bottom:20px"><b>AMDISYES的个人主页</b>
             </div>
-            <div id="hitokoto" style="font-size:14px;padding-bottom:10px;"><span id="from"></span>
-                <noscript style="color:red;">
-                    一言不可用，因为JavaScript已禁用
-                </noscript>
+            <div id="hitokoto" style="font-size:14px;padding-bottom:10px;">
+                <span id="from">一切帝国主义和反动派都是纸老虎。--毛泽东</span>
             </div>
         </center>
         <hr>
-        <p>当前时间： <span class="timebox">
-                <noscript style="color:red;">
-                    时间不可用，因为JavaScript已禁用
-                </noscript> </span></p>
+        <div style="padding-top:10px">
+            当前时间： <span id="timebox">未知</span>
+        </div>
+        <div>
+            今天是： <span id="date">未知</span>
+        </div>
+        <div id="tp-weather-widget"></div>
         <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
         <script>
             //返回顶部
@@ -139,6 +138,40 @@
 					});
 				});
 			});
+			
+			(function(a, h, g, f, e, d, c, b) {
+				b = function() {
+					d = h.createElement(g);
+					c = h.getElementsByTagName(g)[0];
+					d.src = e;
+					d.charset = "utf-8";
+					d.async = 1;
+					c.parentNode.insertBefore(d, c)
+				};
+				a["SeniverseWeatherWidgetObject"] = f;
+				a[f] || (a[f] = function() {
+					(a[f].q = a[f].q || []).push(arguments)
+				});
+				a[f].l = +new Date();
+				if (a.attachEvent) {
+					a.attachEvent("onload", b)
+				} else {
+					a.addEventListener("load", b, false)
+				}
+			}(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
+				parseInt((new Date().getTime() / 100000000).toString(), 10)));
+			window.SeniverseWeatherWidget('show', {
+				flavor: "slim",
+				location: "WTN75JN9H56X",
+				geolocation: true,
+				language: "zh-Hans",
+				unit: "c",
+				theme: "auto",
+				token: "4595f371-fbcb-49ee-886f-8f1d68f35334",
+				hover: "enabled",
+				container: "tp-weather-widget"
+			})
         </script>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     </body>
 </html>
