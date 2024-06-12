@@ -29,14 +29,11 @@
                     color:white;
                 }
             }
-            body {
-                color:white;
-            }
             .countdown { font-size: 36px; text-align: center; animation: countdown-animation 1s infinite; } @keyframes countdown-animation { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
 		</style>
         <title>AMDISYES-Home</title>
     </head>
-    <body background="bg32.png" style="font-family:unifont;">
+    <body style="font-family:unifont;">
         <marquee style="background-color:black;color:red;">
             祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！
         </marquee>
@@ -80,7 +77,7 @@
         <div>
             今天是： <span id="year"></span><span id="date">未知</span>
         </div> <!--<p style="color:red;">距离中考仅剩<span class="countdown"></span></p>-->
-<div id="tp-weather-widget" style="color:white;"></div>
+<div id="tp-weather-widget"></div>
   <script>
     (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
     window.SeniverseWeatherWidget('show', {
