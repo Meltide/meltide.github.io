@@ -77,4 +77,5 @@ footer a:visited {
     right: 10px;
     z-index: 99;
     border-radius: 50%;
+    display: none;
 }
