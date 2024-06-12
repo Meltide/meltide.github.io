@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="description" name="AMDISYES的个人主页">
         <meta name="keywords" name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
+        <link href="css/mdui.min.css" rel="stylesheet">
         <link href="img/favoricon.png" rel="shortcut icon"> <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> <!--[if lt IE 9]>
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -41,7 +42,7 @@
 		</style>
         <title>AMDISYES-Home</title>
     </head>
-    <body style="font-family:unifont;" background="bg.png">
+    <body style="font-family:unifont;" background="bg.png" class="mdui-container">
         <marquee style="background-color:black;color:red;">
             祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！
         </marquee>
@@ -100,10 +101,15 @@
         <form onsubmit="return search()" style="white-space:nowrap;padding-top:12px;">
             <input type="text" autocomplete="off" id="search_input" placeholder="必应搜索..." style="height:18px;"> <button onclick="return search()">搜索</button>
         </form>
-        <p>网站访问总次数：<br><img src="https://count.himiku.com/get/@huakaifg24?theme=moebooru" style="padding-top:5px;"></p> <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
+        <p>网站访问总次数：<br><img src="https://count.himiku.com/get/@huakaifg24?theme=moebooru" style="padding-top:5px;" class="mdui-img-fluid"></p> <button id="up" onclick="up()" style="position:fixed;bottom:10px;right:10px;z-index:99;">返回顶部</button>
         <hr>
         <h2>关于我&nbsp;&nbsp;<img src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&amp;spec=640&amp;img_type=jpg" style="height:30px;width:30px;"></h2>
-        <details style="padding-left:6px"><summary>点击查看大头照</summary> <img src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&amp;spec=640&amp;img_type=jpg" style="height:250px;width:250px;">
+        <details style="padding-left:6px"><summary>点击查看大头照</summary>
+            <div class="mdui-row">
+                <div class="mdui-col-xs-6">
+                    <img src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&amp;spec=640&amp;img_type=jpg" class="mdui-img-fluid">
+                </div>
+            </div>
             <div>
                 长按保存图像
             </div>
@@ -125,6 +131,7 @@
             <li>网站使用字体: Unifont</li>
             <li>获取QQ头像的API来自腾讯云开发者社区</li>
             <li>一言API(Hitokoto)由知乎大佬给出</li>
+            <li>本网站由<a href="https://github.com">Github</a>托管</li>
             <li>本项目仓库：<a href="https://github.com/AMDISYES/amdisyes.github.io">点击前往</a><br><del>能不能给我点个star...</del></li>
         </ul>
         <hr>
