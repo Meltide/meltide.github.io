@@ -524,19 +524,15 @@
 		</footer>
 		<script>
 			//返回顶部
-			window.onscroll = function() {
-				scrollFunction()
-			};
-
-			function scrollFunction() {
-				console.log(121);
-				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-					document.getElementById("up").style.display = "block";
-				} else {
-					document.getElementById("up").style.display = "none";
-				}
-			}
-
+			window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {console.log(121);
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("up").style.display = "block";
+                } else {
+                    document.getElementById("up").style.display = "none";
+                }
+            }
+            
 			function up() {
 				document.body.scrollTop = 0;
 				document.documentElement.scrollTop = 0;
