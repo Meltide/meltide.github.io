@@ -143,11 +143,11 @@
             <li>简洁的方向键和半透明物品栏</li>
             <li>相比原版体积缩小了约20%</li>
             <li>HUD面板和伪装Vape Logo</li>
-        </div> <b>访问密码：2nk4</b> <button href="https://amdisyes.lanzouk.com/b02q2sxli">下载</button>
+        </div> <b>访问密码：2nk4</b> <button onclick="location.href='https://amdisyes.lanzouk.com/b02q2sxli'">下载</button>
         <p></p>
         <h2>CQ Chatroom</h2>
         <div>
-            一个易语言局域网聊天室 <br> <b>访问密码: c27j(客户端) hp04(服务端)</b> <br> <button href="https://amdisyes.lanzouk.com/b02ql6pef">下载客户端</button> <button href="https://amdisyes.lanzouk.com/b02ql6pab">下载服务端</button>
+            一个易语言局域网聊天室 <br> <b>访问密码: c27j(客户端) hp04(服务端)</b> <br> <button onclick="location.href='https://amdisyes.lanzouk.com/b02ql6pef'">下载客户端</button> <button onclick="location.href='https://amdisyes.lanzouk.com/b02ql6pab'">下载服务端</button>
         </div>
         <p></p>
         <h2>ServerHelper</h2>
@@ -155,16 +155,16 @@
             一个适用于PocketMine-MP的“全能”插件 <br> 支持版本：0.12-0.14 <br> 插件功能： <br>
             <li>服务器帮助</li>
             <li>输入指令给面包</li> 项目地址：<a href="https://github.com/AMDISYES/serverhelper" target="_blank">https://github.com/AMDISYES/serverhelper</a>
-        </div> <button href="https://github.com/AMDISYES/serverhelper/releases/latest">下载</button>
+        </div> <button onclick="location.href='https://github.com/AMDISYES/serverhelper/releases/latest'">下载</button>
         <p></p>
         <h2>H4起始页</h2>
         <div>
             基于HTML4技术的简单起始页 <br> 项目地址：<br><a href="https://github.com/AMDISYES/amdisyes.github.io" target="_blank">https://github.com/AMDISYES/amdisyes.github.io</a>
-        </div> <button href="https://amdisyes.github.io/start.html">访问</button>
+        </div> <button onclick="location.href='https://amdisyes.github.io/start.html'">访问</button>
         <h2>MCSungou资源站</h2>
         <div>
             很早以前搞的了，资源长期未更新，采用永硕e盘
-        </div> <button href="http://mcsungou.ysepan.com">访问</button>
+        </div> <button onclick="location.href='http://mcsungou.ysepan.com'">访问</button>
         <hr>
         <h2>中国传统节日一览表</h2>
         <li>农历正月初一 春节</li>
@@ -215,7 +215,7 @@
         <li>大寒 1月20-21日</li>
         <hr>
         <div style="background-color:black;color:white;" class="footer">
-            ©AMDISYES 2022-2024 <br> <a href="index1.html">回旧版</a> <a href="http://amdisyes.xlphp.net/old">2023年版</a> <a href="http://amdisyes.xlphp.net/past">2022年版</a> <br> <span class="padding-top:16px;"><a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/big/56" alt="wapmz.com"></a><img src="img/logo.png" width="62" height="31"><img src="img/classic.png" width="62" height="31"></span>
+            ©AMDISYES 2022-<span id="cpyear"></span> <br> <a href="index1.html">现代版</a> <a href="http://amdisyes.xlphp.net/old">2023年版</a> <a href="http://amdisyes.xlphp.net/past">2022年版</a> <br> <span class="padding-top:16px;"><a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/big/56" alt="wapmz.com"></a><img src="img/logo.png" width="62" height="31"><img src="img/classic.png" width="62" height="31"></span>
         </div>
         <div style="background-color:black;color:white;margin-top:8px;" class="footer">
             <center><a onclick="up()">[带我回顶部]</a></center>
@@ -262,6 +262,7 @@
 			xhr.send();
 			//获取日期
 			var ThisNowDate = new Date();
+			var month = ThisNowDate.getMonth() + 1;
 			if (document.getElementById("date")) {
 				if (ThisNowDate.getDay() == 1)
 					var Weeks = '星期一'
@@ -277,10 +278,11 @@
 					var Weeks = '星期六'
 				else if (ThisNowDate.getDay() == 0)
 					var Weeks = '星期日'
-				document.getElementById('date').innerHTML = ThisNowDate.getMonth() + 1 +
+				document.getElementById('date').innerHTML = ThisNowDate.getFullYear() + '年' + month +
 					'月' +
 					ThisNowDate.getDate() + '日' + ' ' +
 					Weeks;
+				document.getElementById('cpyear').innerHTML = ThisNowDate.getFullYear()
 			}
 			//获取时间
 			function getTime() {
@@ -347,10 +349,6 @@
     // 启动倒计时
     updateCountdown();
 			
-			//获取年份
-			var dt = new Date();
-			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
-			document.getElementById("cpyear").innerHTML = dt.getFullYear();
         </script>
         <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     </body>
