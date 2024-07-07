@@ -16,7 +16,6 @@
 		<link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
 		<script src="js/mdui.min.js"></script>
-		<script src="js/countdown.min.js"></script>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
 		<style>
@@ -78,10 +77,6 @@
 				<li class="mdui-list-item mdui-ripple" onclick="location.href='cps.html'">
 					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe323;</i>
 					<div class="mdui-list-item-content">CPS测试</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='index1.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe84f;</i>
-					<div class="mdui-list-item-content">复古主页</div>
 				</li>
 				<li class="mdui-subheader">友情链接</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://high20212021.github.io/')">
@@ -171,12 +166,8 @@
 				</p>
 				<p class="mdui-typo-body-2">请检查浏览器设置或F12菜单中“禁用JavaScript”选项是否开启</p>
 			</div>
-		</noscript><!--
-		<div class="mdui-color-red" style="padding: 8px;">
-			<p class="mdui-typo-body-2">距离浙江中考仅剩：</p>
-			<p class="mdui-typo-display-1" id="countdown0721"><b>?天 ?小时 ?分钟 ?秒</b></p>
-		</div>-->
-		<marquee class="banner mdui-color-red mdui-text-color-white">祝愿天下所有考生开心度过中考。祝福你们旗开得胜，取得美好佳绩。平心对待中考，你们是最棒的！相信自己，一定能行！</marquee>
+		</noscript>
+		<marquee class="banner mdui-color-red mdui-text-color-white">台湾岛、钓鱼岛永远属于中国！</marquee>
 		<div class="mdui-container" id="top">
 			<div class="mdui-row" style="padding-top: 14px;">
 				<div class="mdui-col-xs-9 mdui-col-sm-10 mdui-col-lg-11">
@@ -193,8 +184,6 @@
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe0c9;</i>
 					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="from"></span><noscript
 							class="mdui-text-color-red">一言不可用，因为JavaScript已禁用</noscript></span>
-					<br>
-					<span class="mdui-m-t-2 mdui-typo-body-2" style="color:red;">距离浙江中考仅剩：<span id="countdown0721"></span></span>
 					<br>
 					<div id="tp-weather-widget" mdui-tooltip="{content: '点击看详情'}"><noscript
 							class="mdui-text-color-red mdui-typo-body-2">天气不可用，因为JavaScript已禁用</noscript></div>
@@ -225,14 +214,18 @@
 					<div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 285px;">
 						<div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">关于我</div>
-							<div class="mdui-card-content mdui-typo">
-								<li><img src="img/qq.svg" style="height:16px; width: 16px; transform: translateY(2px)translateX(-1.5px);">&nbsp;QQ:
+							<div class="mdui-card-content mdui-typo mdui-m-t-2">
+								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0b7;</i>&nbsp;QQ:
 									3480656548</li>
-								<li><img src="img/bilibili.svg" style="height:16px; width: 16px; transform: translateY(2.5px)translateX(-1.5px);">&nbsp;B站: <a
+								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe639;</i>&nbsp;B站: <a
 										href="https://space.bilibili.com/57690791" target="_blank">AMDISYES</a></li>
-								<li><img src="img/github.svg" style="height:16px; width: 16px; transform: translateY(2.5px)translateX(-1.5px);">&nbsp;Github: <a href="https://github.com/AMDISYES">AMDISYES</a></li>
-								<li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;Telegram：<a href="https://t.me/amdisyes">@amdisyes</a></li>
-								<li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;我的TG频道：<a href="https://t.me/smallass">点击前往</a></li>
+								<li><svg height="15" width="15" aria-hidden="true" viewBox="0.9 -5 16 19" version="1.1"
+										data-view-component="true"
+										class="octicon octicon-mark-github v-align-middle color-fg-default">
+										<path
+											d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+										</path>
+									</svg>&nbsp;Github: <a href="https://github.com/AMDISYES">AMDISYES</a></li>
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0be;</i>&nbsp;邮箱1:
 									amdisyes@outlook.com</li>
 								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0e1;</i>&nbsp;邮箱2:
@@ -253,7 +246,6 @@
 								<li>网站使用字体: Roboto</li>
 								<li>获取QQ头像的API来自腾讯云开发者社区</li>
 								<li>一言API(Hitokoto)由知乎大佬给出</li>
-								<li>网页由<a href="https://github.com">Github</a>托管</li>
 								<li>本项目仓库：<a href="https://github.com/AMDISYES/amdisyes.github.io">点击前往</a><br><del>能不能给我点个star...</del>
 							</div>
 						</div>
@@ -520,15 +512,19 @@
 		</footer>
 		<script>
 			//返回顶部
-			window.onscroll = function() {scrollFunction()};
-            function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("up").style.display = "block";
-                } else {
-                    document.getElementById("up").style.display = "none";
-                }
-            }
-            
+			window.onscroll = function() {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				console.log(121);
+				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+					document.getElementById("up").style.display = "block";
+				} else {
+					document.getElementById("up").style.display = "none";
+				}
+			}
+
 			function up() {
 				document.body.scrollTop = 0;
 				document.documentElement.scrollTop = 0;
@@ -621,7 +617,7 @@
 				});
 			});
 			
-// 目标日期
+			// 目标日期
     var targetDate = new Date("2024-06-22T00:00:00");
 
     // 更新倒计时
@@ -636,7 +632,7 @@
       var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       // 更新页面上的倒计时显示
-      document.getElementById("countdown0721").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
 
       // 每秒钟更新一次倒计时
       setTimeout(updateCountdown, 1000);
@@ -644,9 +640,6 @@
 
     // 启动倒计时
     updateCountdown();
-
-    // 启动倒计时
-    countdown.start();
 		</script>
 	</body>
 </html>
