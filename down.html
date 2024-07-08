@@ -73,10 +73,6 @@
 					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe323;</i>
 					<div class="mdui-list-item-content">CPS测试</div>
 				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='index1.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe84f;</i>
-					<div class="mdui-list-item-content">复古主页</div>
-				</li>
 				<li class="mdui-subheader">友情链接</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://high20212021.github.io/')">
 					<!--
@@ -102,6 +98,12 @@
 						style="height: 30px; width: 30px; margin-right: 16px; background-color: black;"
 						    src="https://minqwq.github.io/images/siteicon16x.png"></mdui-avatar>
 					<div class="mdui-list-item-content">minqwq 个人网站</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://outice2024.github.io/outice/')">
+					<mdui-avatar
+						style="height: 30px; width: 30px; margin-right: 16px; background-color: brown; color: white;">O
+					</mdui-avatar>
+					<div class="mdui-list-item-content">outice的博客</div>
 				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://bibimingming.github.io/MCPE014.github.io/')">
 					<mdui-avatar
@@ -221,17 +223,16 @@
 	    	//返回顶部
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
                     document.getElementById("up").style.display = "block";
                 } else {
                     document.getElementById("up").style.display = "none";
                 }
             }
-            
-			function up() {
-				document.body.scrollTop = 0;
-				document.documentElement.scrollTop = 0;
-			}
+            function up() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
 			var dt = new Date();
 			document.getElementById("cpyear1").innerHTML = dt.getFullYear();
 		</script>

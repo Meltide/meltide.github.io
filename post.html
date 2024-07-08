@@ -73,10 +73,6 @@
 					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe323;</i>
 					<div class="mdui-list-item-content">CPS测试</div>
 				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='index1.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe84f;</i>
-					<div class="mdui-list-item-content">复古主页</div>
-				</li>
 				<li class="mdui-subheader">友情链接</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://high20212021.github.io/')">
 					<!--
@@ -102,6 +98,12 @@
 						style="height: 30px; width: 30px; margin-right: 16px; background-color: black;"
 						    src="https://minqwq.github.io/images/siteicon16x.png"></mdui-avatar>
 					<div class="mdui-list-item-content">minqwq 个人网站</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://outice2024.github.io/outice/')">
+					<mdui-avatar
+						style="height: 30px; width: 30px; margin-right: 16px; background-color: brown; color: white;">O
+					</mdui-avatar>
+					<div class="mdui-list-item-content">outice的博客</div>
 				</li>
 				<li class="mdui-list-item mdui-ripple" onclick="window.open('https://bibimingming.github.io/MCPE014.github.io/')">
 					<mdui-avatar
@@ -142,34 +144,6 @@
 					<img class="mdui-card-header-avatar"
 						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
 					<div class="mdui-card-header-title">AMDISYES</div>
-					<div class="mdui-card-header-subtitle">2024-6-13 21:18:29</div>
-				</div>
-				<div class="mdui-card-primary mdui-color-red-400">
-					<div class="mdui-card-primary-title">祝大家中考都能考出理想的成绩！</div>
-					<div class="mdui-card-content mdui-typo"></div>
-				</div>
-			</div>
-		    <div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-header mdui-color-grey-50">
-					<img class="mdui-card-header-avatar"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-					<div class="mdui-card-header-title">AMDISYES</div>
-					<div class="mdui-card-header-subtitle">2024-6-13 21:12:28</div>
-				</div>
-				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">我的TG频道全新开业😋</div>
-					<div class="mdui-card-content mdui-typo">
-						频道名：花开富贵闹谭贫道🥵🥵
-						<br>
-						链接：<a href="https://t.me/amdesktop01">t.me/amdesktop01</a>
-					</div>
-				</div>
-			</div>
-		    <div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-header mdui-color-grey-50">
-					<img class="mdui-card-header-avatar"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-					<div class="mdui-card-header-title">AMDISYES</div>
 					<div class="mdui-card-header-subtitle">2024-3-24 21:59:45</div>
 				</div>
 				<div class="mdui-card-primary">
@@ -177,7 +151,7 @@
 					<div class="mdui-card-content mdui-typo">
 						见证新梗的诞生：互通大佬
 						<br>
-						<button class="mdui-btn mdui-color-pink mdui-m-t-2" mdui-dialog="{target: '#art3'}">查看图片</button>
+						<a mdui-dialog="{target: '#art3'}">查看图片</a>
 						<div class="mdui-dialog" id="art3">
 			                <div class="mdui-dialog-content">
 				                <div class="mdui-container">
@@ -206,7 +180,7 @@
 						<br>
 						(截图来自STEVE_MCPE)
 						<br>
-						<button class="mdui-btn mdui-color-pink mdui-m-t-2" mdui-dialog="{target: '#art2'}">查看图片</button>
+						<a mdui-dialog="{target: '#art2'}">查看图片</a>
 						<div class="mdui-dialog" id="art2">
 			                <div class="mdui-dialog-content">
 				                <div class="mdui-container">
@@ -233,7 +207,7 @@
 					<div class="mdui-card-content mdui-typo">
 						刷屏大蛇DX666放狠话：有本事来封我号啊
 						<br>
-						<button class="mdui-btn mdui-color-pink mdui-m-t-2" mdui-dialog="{target: '#art1'}">查看图片</button>
+						<a mdui-dialog="{target: '#art1'}">查看图片</a>
 						<div class="mdui-dialog" id="art1">
 			                <div class="mdui-dialog-content">
 				                <div class="mdui-container">
@@ -307,17 +281,16 @@
 	    	//返回顶部
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
                     document.getElementById("up").style.display = "block";
                 } else {
                     document.getElementById("up").style.display = "none";
                 }
             }
-            
-			function up() {
-				document.body.scrollTop = 0;
-				document.documentElement.scrollTop = 0;
-			}
+            function up() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
 			var dt = new Date();
 			document.getElementById("cpyear2").innerHTML = dt.getFullYear();
 		</script>
