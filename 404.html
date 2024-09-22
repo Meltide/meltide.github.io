@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link href="img/favoricon.png" rel="shortcut icon">
+		<link href="css/mdui.min.css" rel="stylesheet">
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
+		<style>
+			blockquote {
+				font-style: italic;
+				padding: 10px;
+				margin: 10px 0;
+				padding-left: 15px;
+				border-left: 5px solid #FF4081;
+				background-color: #f9f9f9;
+			}
+		</style>
+		<title>404 - 找不到页面</title>
+	</head>
+	<body>
+		<div class="mdui-container" style="margin-top: 75px;margin-bottom: 40px;">
+			<div class="mdui-typo-display-3">
+				<i class="mdui-icon material-icons mdui-typo-display-3" style="transform: translateY(-5px);">&#xe002;</i>
+				404<br>
+				找不到页面
+				<div class="mdui-typo-body-1"><b>请检查你输入的网址是否正确 :)</b></div>
+			</div>
+			<blockquote class="mdui-typo mdui-m-t-1" id="hitokoto">
+				<span class="mdui-typo-body-1" id="hitokoto_text">一切帝国主义和反动派都是纸老虎。</span>
+			</blockquote>
+		</div>
+		<div class="mdui-container mdui-m-t-2">
+			<button class="mdui-btn mdui-color-pink mdui-m-r-1" onclick="history.back()">上一页</button>
+			<button class="mdui-btn mdui-color-pink" onclick="location.href='/'">返回主页</button>
+		</div>
+		<script>
+			fetch('https://v1.hitokoto.cn')
+				.then(response => response.json())
+				.then(data => {
+					const hitokoto = document.querySelector('#hitokoto_text')
+					hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+					hitokoto.innerText = data.hitokoto
+				})
+				.catch(console.error)
+		</script>
+	</body>
+</html>

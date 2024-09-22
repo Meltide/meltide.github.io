@@ -127,7 +127,7 @@
 						id="date"><noscript class="mdui-text-color-red">日期不可用，因为JavaScript已禁用</noscript></span>
 					<br>
 					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe0c9;</i>
-					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="from"></span><noscript
+					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="hitokoto_text"></span><noscript
 							class="mdui-text-color-red">一言不可用，因为JavaScript已禁用</noscript></span>
 					<br>
 					<div id="tp-weather-widget" mdui-tooltip="{content: '点击看详情'}"><noscript
@@ -385,18 +385,14 @@
 				return false;
 			}
 			//一言
-			var xhr = new XMLHttpRequest();
-			xhr.open('get', 'https://v1.hitokoto.cn/?c=b');
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState === 4) {
-					var data = JSON.parse(xhr.responseText);
-					var hitokoto = document.getElementById('hitokoto');
-					var fromm = document.getElementById("from")
-					fromm.innerText = data.from;
-					hitokoto.innerText = data.hitokoto;
-				}
-			}
-			xhr.send();
+			fetch('https://v1.hitokoto.cn')
+				.then(response => response.json())
+				.then(data => {
+					const hitokoto = document.querySelector('#hitokoto_text')
+					hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+					hitokoto.innerText = data.hitokoto
+				})
+				.catch(console.error)
 			//获取日期
 			var ThisNowDate = new Date();
 			if (document.getElementById("date")) {
