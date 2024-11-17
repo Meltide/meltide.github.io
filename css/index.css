@@ -1,5 +1,12 @@
+@font-face {
+    font-style: normal;
+    font-family: 'Harmony_Regular';
+    src: url('fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+}
+
 body {
 	background-color: white;
+	font-family: 'Harmony_Regular', sans-serif
 }
 
 .avatarh {
