@@ -1,12 +1,48 @@
 @font-face {
     font-style: normal;
-    font-family: 'Harmony_Regular';
+    font-family: 'HarmonySans';
+    src: url('../fonts/HarmonyOS_Sans_Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-style: normal;
+    font-family: 'HarmonySans';
+    src: url('../fonts/HarmonyOS_Sans_Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-style: normal;
+    font-family: 'HarmonySans';
     src: url('../fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-style: normal;
+    font-family: 'HarmonySans';
+    src: url('../fonts/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-style: normal;
+    font-family: 'HarmonySans';
+    src: url('../fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-style: normal;
+    font-family: 'HarmonySans';
+    src: url('../fonts/HarmonyOS_Sans_Black.ttf') format('truetype');
+    font-weight: 900;
 }
 
 body {
 	background-color: white;
-	font-family: 'Harmony_Regular', sans-serif
+	font-family: 'HarmonySans', sans-serif
 }
 
 .avatarh {
