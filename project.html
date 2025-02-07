@@ -79,27 +79,31 @@
 			</div>
 		</div>
 		<div class="mdui-container mdui-m-t-3 mdui-m-b-2">
-		    <span class="mdui-typo-display-2"><b>项目</b></span>
+			<span class="mdui-typo-display-2"><b>项目</b></span>
 		</div>
 		<div class="mdui-divider"></div>
 		<div class="mdui-container mdui-m-t-2 mdui-m-b-2">
-		    <div class="mdui-card mdui-ripple">
-		        <div class="mdui-card-primary">
-		            <div class="mdui-card-primary-title">Github 数据</div>
-		            <div class="mdui-card-content mdui-typo">
-		                <div class="mdui-row">
-		                    <div class="mdui-col-sm-6">
-        		                <img src="https://camo.githubusercontent.com/bd73608c4f995aaa4c3c16817aba47cb6ac38902833807946812092fef58a70b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d4d656c74696465" class="mdui-img-fluid">
-        		            </div>
-        		            <div class="mdui-col-sm-6">
-        		                <img src="https://camo.githubusercontent.com/0c5382faa2a1f00dd648d24dad9fa8c3407d9aeecd748c6a155027d2a8b86efa/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d4d656c74696465" class="mdui-img-fluid">
-        		            </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
+			<div class="mdui-panel" mdui-panel>
+				<div class="mdui-panel-item mdui-ripple">
+					<div class="mdui-panel-item-header">
+						<div class="mdui-panel-item-title"><h3>Github 数据</h3></div>
+						<i class="mdui-panel-item-arrow mdui-icon material-icons">&#xe313;</i>
+					</div>
+					<div class="mdui-panel-item-body">
+						<div class="mdui-row">
+							<div class="mdui-col-sm-6">
+								<img src="https://camo.githubusercontent.com/bd73608c4f995aaa4c3c16817aba47cb6ac38902833807946812092fef58a70b/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d4d656c74696465"
+									class="mdui-img-fluid">
+							</div>
+							<div class="mdui-col-sm-6">
+								<img src="https://camo.githubusercontent.com/0c5382faa2a1f00dd648d24dad9fa8c3407d9aeecd748c6a155027d2a8b86efa/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d4d656c74696465"
+									class="mdui-img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="mdui-divider"></div>
 		<div class="mdui-container mdui-m-t-2 mdui-m-b-2" id="top">
 			<div class="mdui-row">
 				<div class="mdui-col-sm-6">
@@ -138,15 +142,16 @@
 							</div>
 						</div>
 					</div>
-			        <div class="mdui-card mdui-ripple mdui-m-b-2">
+					<div class="mdui-card mdui-ripple mdui-m-b-2">
 						<div class="mdui-card-primary">
 							<div class="mdui-card-primary-title">MPGA PyOS</div>
 							<div class="mdui-card-content mdui-typo">
 								一个基于Python3的伪操作系统<br>
-			                    特点：<br>
-			                    <li>密码以base64加密存储</li>
-			                    <li>仿真zsh的体验</li>
-			                    项目地址：<a href="https://github.com/Meltide/mpga-pyos" target="_blank">https://github.com/Meltide/mpga-pyos</a>
+								特点：<br>
+								<li>密码以base64加密存储</li>
+								<li>仿真zsh的体验</li>
+								项目地址：<a href="https://github.com/Meltide/mpga-pyos"
+									target="_blank">https://github.com/Meltide/mpga-pyos</a>
 							</div>
 							<div class="mdui-card-actions">
 								<div class="mdui-btn mdui-color-pink"
@@ -213,28 +218,35 @@
 				</div>
 			</div>
 		</div>
-		<button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
+		<button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i
+				class="mdui-icon material-icons">&#xe5d8;</i></button>
 		<footer class="mdui-container-fluid">
 			<span>&copy;Lifeinvader Studio 2023~<span id="cpyear1"></span>&nbsp;&nbsp;</span>
 			<a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
 			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
 			<br>
-			<a href="http://icp.im/beian/ICP-2024100068.html"><img src="http://520524.xyz/bqb" style="height: 20px;">酱2024100068号</a>
+			<a href="http://icp.im/beian/ICP-2024100068.html"><img src="http://520524.xyz/bqb"
+					style="height: 20px;">酱2024100068号</a>
 		</footer>
 		<script>
-	    	//返回顶部
-            window.onscroll = function() {scrollFunction()};
-            function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-                    document.getElementById("up").style.display = "block";
-                } else {
-                    document.getElementById("up").style.display = "none";
-                }
-            }
-            function up() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
+			//返回顶部
+			window.onscroll = function() {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				console.log(121);
+				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+					document.getElementById("up").style.display = "block";
+				} else {
+					document.getElementById("up").style.display = "none";
+				}
+			}
+
+			function up() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
 			var dt = new Date();
 			document.getElementById("cpyear1").innerHTML = dt.getFullYear();
 		</script>
