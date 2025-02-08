@@ -1,125 +1,122 @@
 <!DOCTYPE HTML>
 <html lang="zh-cn">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="css/mdui.min.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
-		<link href="img/favoricon.png" rel="shortcut icon">
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/mdui.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="img/favoricon.png" rel="shortcut icon">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<title>CPS测试 - MeltIce-Home</title>
-	</head>
-	<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar">
-		<div class="mdui-container">
-			<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
-				<div class="mdui-toolbar mdui-color-white">
-					<a class="mdui-btn mdui-btn-icon" onclick="history.back()" mdui-tooltip="{content: '返回'}">
-						<i class="mdui-icon material-icons">&#xe5c4;</i>
-					</a>
-					<a class="mdui-btn mdui-btn-icon" onclick="location.href='index.html'" mdui-tooltip="{content: '主页'}">
-						<i class="mdui-icon material-icons">&#xe88a;</i>
-					</a>
-					<span class="mdui-typo-headline">MeltIce-Home</span>
-					<span class="mdui-typo-title">CPS测试</span>
-					<div class="mdui-toolbar-spacer"></div>
-					<a class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#aboutPages'}" mdui-tooltip="{content: '关于'}">
-						<i class="mdui-icon material-icons">&#xe88f;</i>
-					</a>
-				</div>
-			</div>
-			<br>
-			<center class="mdui-m-t-2">
-				<div class="mdui-card mdui-m-t-1" style="width: 60%;min-width: 300px;">
-					<div class="mdui-card-content">
-						<h1>来测测你的CPS吧！</h1>
-					</div>
-					<div class="mdui-card-content">tips:点击按钮就开始测试了！</div>
-					<div id="match" style="display: block;">
-						剩余时间：<span id="time">10</span>s 点击次数：<span id="times">0</span>次
-						<div class="mdui-col mdui-p-l-2 mdui-m-t-1 mdui-p-r-2 mdui-m-b-4" style="max-width: 500px;">
-							<button id="start" onclick="start()"
-								class="mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent mdui-ripple"
-								style="height: 100px;">
+    <title>CPS测试 - MeltIce-Home</title>
+</head>
+
+<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar">
+    <div class="mdui-container">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
+            <div class="mdui-toolbar mdui-color-white">
+                <a class="mdui-btn mdui-btn-icon" onclick="history.back()" mdui-tooltip="{content: '返回'}">
+                    <i class="mdui-icon material-icons">&#xe5c4;</i>
+                </a>
+                <a class="mdui-btn mdui-btn-icon" onclick="location.href='index.html'" mdui-tooltip="{content: '主页'}">
+                    <i class="mdui-icon material-icons">&#xe88a;</i>
+                </a>
+                <span class="mdui-typo-headline">MeltIce-Home</span>
+                <div class="mdui-toolbar-spacer"></div>
+                <a class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#aboutPages'}" mdui-tooltip="{content: '关于'}">
+                    <i class="mdui-icon material-icons">&#xe88f;</i>
+                </a>
+            </div>
+        </div>
+        <br>
+        <center class="mdui-m-t-2">
+            <div class="mdui-card mdui-m-t-1" style="width: 60%;min-width: 300px;">
+                <div class="mdui-card-content">
+                    <h1>来测测你的CPS吧！</h1>
+                </div>
+                <div class="mdui-card-content">tips:点击按钮就开始测试了！</div>
+                <div id="match" style="display: block;">
+                    剩余时间：<span id="time">10</span>s 点击次数：<span id="times">0</span>次
+                    <div class="mdui-col mdui-p-l-2 mdui-m-t-1 mdui-p-r-2 mdui-m-b-4" style="max-width: 500px;">
+                        <button id="start" onclick="start()" class="mdui-btn mdui-btn-raised mdui-btn-block mdui-color-theme-accent mdui-ripple" style="height: 100px;">
 								<h1>开始</h1>
 							</button>
-						</div>
-					</div>
-					<div id="match1" style="display:none">
-						<h3>测试结束</h3>
-						<h4>您的CPS为：<span id="match2">Null</span></h4>
-						<br>
-						<h4>该成绩为10秒平均点击速率。</h4>
-						<button
-							onclick="document.getElementById('match1').style.display='none';document.getElementById('match').style.display='block';document.getElementById('times').innerHTML = 0;jc = 0;"
-							class="mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-m-b-2 mdui-ripple">重新测试</button>
-					</div>
-			</center>
-			<div class="mdui-dialog" id="aboutPages">
-				<div class="mdui-dialog-title">关于 About</div>
-				<div class="mdui-dialog-content mdui-typo">@苦力怕纸 开发 | MeltIce修改<br>框架使用开源项目：MDUI<br>本页仓库：<a
-						href="https://github.com/klpbbs/CPS-Test" target="_black">CPS-Test</a></div>
-				<div class="mdui-dialog-actions">
-					<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
-				</div>
-			</div>
-		</div>
-		<script>
-			var jc = 0
+                    </div>
+                </div>
+                <div id="match1" style="display:none">
+                    <h3>测试结束</h3>
+                    <h4>您的CPS为：<span id="match2">Null</span></h4>
+                    <br>
+                    <h4>该成绩为10秒平均点击速率。</h4>
+                    <button onclick="document.getElementById('match1').style.display='none';document.getElementById('match').style.display='block';document.getElementById('times').innerHTML = 0;jc = 0;" class="mdui-btn mdui-btn-raised mdui-color-theme-accent mdui-m-b-2 mdui-ripple">重新测试</button>
+                </div>
+        </center>
+        <div class="mdui-dialog" id="aboutPages">
+            <div class="mdui-dialog-title">关于 About</div>
+            <div class="mdui-dialog-content mdui-typo">@苦力怕纸 开发 | MeltIce修改<br>框架使用开源项目：MDUI<br>本页仓库：<a href="https://github.com/klpbbs/CPS-Test" target="_black">CPS-Test</a></div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+            </div>
+        </div>
+        </div>
+        <script>
+            var jc = 0
 
-			function start() {
-				var times = document.getElementById('times');
-				if (jc == 0) {
-					id = window.setInterval("time()", 1000);
-					document.getElementById('start').innerHTML = "<h1>点我</h1>";
-				}
-				if (document.getElementById("time").innerHTML != "No time") {
-					jc = jc + 1;
-					times.innerHTML = jc;
-				} else {}
-			}
+            function start() {
+                var times = document.getElementById('times');
+                if (jc == 0) {
+                    id = window.setInterval("time()", 1000);
+                    document.getElementById('start').innerHTML = "<h1>点我</h1>";
+                }
+                if (document.getElementById("time").innerHTML != "No time") {
+                    jc = jc + 1;
+                    times.innerHTML = jc;
+                } else {}
+            }
 
-			function time() {
-				var time = document.getElementById("time");
-				if (time.innerHTML == 0) {
-					time.innerHTML = "No time";
-					document.getElementById('match').style.display = "none";
-					document.getElementById('match1').style.display = "block";
-					var times = document.getElementById('times').innerHTML;
-					document.getElementById('match2').innerHTML = times / 10;
-					clearInterval(id);
-				} else {
-					time.innerHTML = time.innerHTML - 1;
-				}
-				if (time.innerHTML == 5) {
+            function time() {
+                var time = document.getElementById("time");
+                if (time.innerHTML == 0) {
+                    time.innerHTML = "No time";
+                    document.getElementById('match').style.display = "none";
+                    document.getElementById('match1').style.display = "block";
+                    var times = document.getElementById('times').innerHTML;
+                    document.getElementById('match2').innerHTML = times / 10;
+                    clearInterval(id);
+                } else {
+                    time.innerHTML = time.innerHTML - 1;
+                }
+                if (time.innerHTML == 5) {
 
-					document.getElementById('start').innerHTML = "<h1>还有5秒！</h1>";
-				}
-				if (time.innerHTML == 3) {
-					document.getElementById('start').innerHTML = "<h1>还有3秒！</h1>";
-				}
-				if (time.innerHTML == 2) {
-					document.getElementById('start').innerHTML = "<h1>还有2秒！</h1>";
-				}
-				if (time.innerHTML == 1) {
-					document.getElementById('start').innerHTML = "<h1>还有1秒！</h1>";
-				}
-				if (time.innerHTML == 0) {
-					document.getElementById('start').innerHTML = "<h1>快！</h1>";
-				}
-				if (time.innerHTML == "No time") {
-					document.getElementById('start').innerHTML = "<h1>开始！</h1>";
-					time.innerHTML = 10;
-				}
-				if (time.innerHTML == 4) {
-					document.getElementById('start').innerHTML = "<h1>加油！</h1>";
-				}
-			}
-		</script>
-		<script src="js/mdui.min.js"></script>
-	</body>
+                    document.getElementById('start').innerHTML = "<h1>还有5秒！</h1>";
+                }
+                if (time.innerHTML == 3) {
+                    document.getElementById('start').innerHTML = "<h1>还有3秒！</h1>";
+                }
+                if (time.innerHTML == 2) {
+                    document.getElementById('start').innerHTML = "<h1>还有2秒！</h1>";
+                }
+                if (time.innerHTML == 1) {
+                    document.getElementById('start').innerHTML = "<h1>还有1秒！</h1>";
+                }
+                if (time.innerHTML == 0) {
+                    document.getElementById('start').innerHTML = "<h1>快！</h1>";
+                }
+                if (time.innerHTML == "No time") {
+                    document.getElementById('start').innerHTML = "<h1>开始！</h1>";
+                    time.innerHTML = 10;
+                }
+                if (time.innerHTML == 4) {
+                    document.getElementById('start').innerHTML = "<h1>加油！</h1>";
+                }
+            }
+        </script>
+        <script src="js/mdui.min.js"></script>
+</body>
+
 </html>
