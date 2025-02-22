@@ -4,313 +4,297 @@
 -->
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" name="MeltIce的博客">
-		<meta name="keywords"
-			name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,MeltIce,MtIce,mtice,Ice,Melted_Ice,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
-		<link href="img/favoricon.png" rel="shortcut icon">
-		<link href="css/mdui.min.css" rel="stylesheet">
-		<link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
-		<script src="js/mdui.min.js"></script>
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
-		<script src="js/fetch.js"></script>
-		<style>
-			.mdui-btn {
-				margin: 6px;
-			}
 
-			.searchbox {
-				margin-bottom: 10px;
-				width: 180px;
-			}
-
-			.mdui-btn-icon {
-				border-radius: 2px;
-			}
-			
-			.top {
-			    border-radius: 50%;
-			}
-			
-			.mdui-chip {
-			    background-color: white;
-			}
-		</style>
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" name="MeltIce的博客">
+    <meta name="keywords" name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,MeltIce,MtIce,mtice,Ice,Melted_Ice,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
+    <link href="img/favoricon.png" rel="shortcut icon">
+    <link href="css/mdui.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/mdui.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
+    <script src="js/fetch.js"></script>
+    <style>
+        .mdui-btn {
+            margin: 6px;
+        }
+        
+        .searchbox {
+            margin-bottom: 10px;
+            width: 180px;
+        }
+        
+        .mdui-btn-icon {
+            border-radius: 2px;
+        }
+        
+        .top {
+            border-radius: 50%;
+        }
+        
+        .mdui-chip {
+            background-color: white;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<title>MeltIce-Home - 实用工具</title>
-	</head>
-	<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar mdui-drawer-body-left">
-		<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
-			<div class="mdui-toolbar mdui-color-white">
-				<a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '菜单'}">
-					<i class="mdui-icon material-icons">&#xe5d2;</i>
-				</a>
-				<span class="mdui-typo-headline">MeltIce-Home</span>
-				<div class="mdui-toolbar-spacer"></div>
-				<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}">
+    <title>MeltIce-Home - 实用工具</title>
+</head>
+
+<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar mdui-drawer-body-left">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
+        <div class="mdui-toolbar mdui-color-white">
+            <a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '菜单'}">
+                <i class="mdui-icon material-icons">&#xe5d2;</i>
+            </a>
+            <span class="mdui-typo-headline">MeltIce-Home</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}">
 						<i class="mdui-icon material-icons">&#xe8b6;</i>
 					</button>
-					<form onsubmit="return search()">
-						<input class="mdui-textfield-input" type="text" placeholder="必应搜索" />
-					</form>
-					<button class="mdui-textfield-close mdui-btn mdui-btn-icon">
+                <form onsubmit="return search()">
+                    <input class="mdui-textfield-input" type="text" placeholder="必应搜索" />
+                </form>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon">
 						<i class="mdui-icon material-icons">&#xe5cd;</i>
 					</button>
-				</div>
-			</div>
-		</div>
-		<div class="mdui-drawer mdui-shadow-0" id="main">
-			<ul class="mdui-list">
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='index.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-					<div class="mdui-list-item-content">主页</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='project.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe5c3;</i>
-					<div class="mdui-list-item-content">项目</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='down.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe2c0;</i>
-					<div class="mdui-list-item-content">下载</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple mdui-list-item-active">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe869;</i>
-					<div class="mdui-list-item-content">实用工具</div>
-				</li>
-				<div id="drawer"></div>
-			</ul>
-		</div>
-		<div class="mdui-dialog" id="past">
-			<div class="mdui-dialog-title">时光机</div>
-			<div class="mdui-dialog-content">请选择你想要去的页面</div>
-			<div class="mdui-dialog-actions">
-				<button class="mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/old'"">2023年的MeltIce-Blog</button>
-				<button class=" mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/past'"">2022年的MeltIce-Blog</button>
-				<button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
-			</div>
-		</div>
-		<div class="mdui-container mdui-m-t-3 mdui-m-b-2">
-		    <span class="mdui-typo-display-2"><b>实用工具</b></span>
-		</div>
-		<div class="mdui-divider"></div>
-		<div class="mdui-container mdui-m-t-3 mdui-m-b-2" id="top">
-			<div class="mdui-row">
-				<div class="mdui-col-sm-6" style="white-space: nowrap;">
-					<div class="mdui-card mdui-ripple mdui-m-b-2">
-						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">计算器</div>
-							<div class="mdui-card-content mdui-typo mdui-text-center">
-								<input class="searchbox mdui-shadow-3" id="inputbox">
-								<br>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='1'">1</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='2'">2</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='3'">3</button>
-								<button class="mdui-btn mdui-color-indigo mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='+'">+</button>
-								<br>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='4'">4</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='5'">5</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='6'">6</button>
-								<button class="mdui-btn mdui-color-indigo mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='-'">-</button>
-								<br>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='7'">7</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='8'">8</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='9'">9</button>
-								<button class="mdui-btn mdui-color-indigo mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='*'">×</button>
-								<br>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="window.open('https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4?authorization=bce-auth-v1/40f207e648424f47b2e3dfbb1014b1a5/2021-07-12T02:14:24Z/-1/host/530146520a1c89fb727fbbdb8a0e0c98ec69955459aed4b1c8e00839187536c9')">?</button>
-								<button class="mdui-btn mdui-color-pink mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='0'">0</button>
-								<button class="mdui-btn mdui-color-indigo mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='.'">.</button>
-								<button class="mdui-btn mdui-color-indigo mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value+='/'">÷</button>
-								<br>
-								<button class="mdui-btn mdui-color-teal mdui-btn-icon" onclick="backspace()"><i
+            </div>
+        </div>
+    </div>
+    <div class="mdui-drawer mdui-shadow-0" id="main">
+        <ul class="mdui-list">
+            <li class="mdui-list-item mdui-ripple" onclick="location.href='index.html'">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+                <div class="mdui-list-item-content">主页</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="location.href='project.html'">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe5c3;</i>
+                <div class="mdui-list-item-content">项目</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="location.href='down.html'">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe2c0;</i>
+                <div class="mdui-list-item-content">下载</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe869;</i>
+                <div class="mdui-list-item-content">实用工具</div>
+            </li>
+            <div id="drawer"></div>
+        </ul>
+    </div>
+    <div class="mdui-dialog" id="past">
+        <div class="mdui-dialog-title">时光机</div>
+        <div class="mdui-dialog-content">请选择你想要去的页面</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/old'" ">2023年的MeltIce-Blog</button>
+				<button class=" mdui-btn mdui-ripple " onclick="location.href='http://amdisyes.xlphp.net/past' "">2022年的MeltIce-Blog</button>
+            <button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+        </div>
+    </div>
+    <div class="mdui-container mdui-m-t-3 mdui-m-b-2">
+        <span class="mdui-typo-display-2"><b>实用工具</b></span>
+    </div>
+    <div class="mdui-divider"></div>
+    <div class="mdui-container mdui-m-t-3 mdui-m-b-2" id="top">
+        <div class="mdui-row">
+            <div class="mdui-col-sm-6" style="white-space: nowrap;">
+                <div class="mdui-card mdui-ripple mdui-m-b-2">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">计算器</div>
+                        <div class="mdui-card-content mdui-typo mdui-text-center">
+                            <input class="searchbox mdui-shadow-3" id="inputbox">
+                            <br>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='1'">1</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='2'">2</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='3'">3</button>
+                            <button class="mdui-btn mdui-color-indigo mdui-btn-icon" onclick="document.getElementById('inputbox').value+='+'">+</button>
+                            <br>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='4'">4</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='5'">5</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='6'">6</button>
+                            <button class="mdui-btn mdui-color-indigo mdui-btn-icon" onclick="document.getElementById('inputbox').value+='-'">-</button>
+                            <br>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='7'">7</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='8'">8</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='9'">9</button>
+                            <button class="mdui-btn mdui-color-indigo mdui-btn-icon" onclick="document.getElementById('inputbox').value+='*'">×</button>
+                            <br>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="window.open('https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4?authorization=bce-auth-v1/40f207e648424f47b2e3dfbb1014b1a5/2021-07-12T02:14:24Z/-1/host/530146520a1c89fb727fbbdb8a0e0c98ec69955459aed4b1c8e00839187536c9')">?</button>
+                            <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="document.getElementById('inputbox').value+='0'">0</button>
+                            <button class="mdui-btn mdui-color-indigo mdui-btn-icon" onclick="document.getElementById('inputbox').value+='.'">.</button>
+                            <button class="mdui-btn mdui-color-indigo mdui-btn-icon" onclick="document.getElementById('inputbox').value+='/'">÷</button>
+                            <br>
+                            <button class="mdui-btn mdui-color-teal mdui-btn-icon" onclick="backspace()"><i
 										class="mdui-icon material-icons">&#xe317;</i></button>
-								<button class="mdui-btn mdui-color-teal"
-									onclick="document.getElementById('inputbox').value=eval(document.getElementById('inputbox').value)"
-									style="width: 65px; border-radius: 2px; font-size: 30px;">=</button>
-								<button class="mdui-btn mdui-color-teal mdui-btn-icon"
-									onclick="document.getElementById('inputbox').value=''"><i
+                            <button class="mdui-btn mdui-color-teal" onclick="document.getElementById('inputbox').value=eval(document.getElementById('inputbox').value)" style="width: 65px; border-radius: 2px; font-size: 30px;">=</button>
+                            <button class="mdui-btn mdui-color-teal mdui-btn-icon" onclick="document.getElementById('inputbox').value=''"><i
 										class="mdui-icon material-icons">&#xe0b8;</i></button>
-							</div>
-						</div>
-					</div>
-					<div class="mdui-card mdui-ripple mdui-m-b-2">
-						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">今日人品</div>
-							<div class="mdui-card-content mdui-typo">
-								<div class="mdui-chip mdui-shadow-3" style="width: 48px;">
-                                    <span class="mdui-chip-title mdui-text-center" id="rerp0">结果</span>
-                                </div>
-								<button class="mdui-btn mdui-color-pink" onclick="rp()">点我</button>
-								<br>
-								<span class="mdui-text-color-red"><b>注：仅供娱乐，请勿当真</b></span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mdui-col-sm-6">
-					<div class="mdui-card mdui-ripple mdui-m-b-2">
-						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">常用分数转换器</div>
-							<div class="mdui-card-content mdui-typo">
-								总分200转100分制度并判断及格（120分及格）：
-								<div style="white-space: nowrap;">
-									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs200" type="number">
-									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal200()"
-										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
-								</div>
-								<p>结果：<span id="re200"></span>&nbsp;&nbsp;<a onclick="qcal200()">清空</a></p>
-								总分160转100分制度并判断及格（96分及格）：
-								<div style="white-space: nowrap;">
-									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs160" type="number">
-									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal160()"
-										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
-								</div>
-								<p>结果：<span id="re160"></span>&nbsp;&nbsp;<a onclick="qcal160()">清空</a></p>
-								总分150转100分制度并判断及格（90分及格）：
-								<div style="white-space: nowrap;">
-									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs150" type="number">
-									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal150()"
-										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
-								</div>
-								<p>结果：<span id="re150"></span>&nbsp;&nbsp;<a onclick="qcal150()">清空</a></p>
-								总分120转100分制度并判断及格（72分及格）：
-								<div style="white-space: nowrap;">
-									<input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs120" type="number">
-									<button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal120()"
-										style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
-								</div>
-								<p>结果：<span id="re120"></span>&nbsp;&nbsp;<a onclick="qcal120()">清空</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
-		<footer class="mdui-container-fluid">
-			<span>&copy;Lifeinvader Studio 2023~<span id="cpyear3"></span>&nbsp;&nbsp;</span>
-			<a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
-			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
-			<br>
-			<a href="http://icp.im/beian/ICP-2024100068.html"><img src="http://520524.xyz/bqb" style="height: 20px;">酱2024100068号</a>
-		</footer>
-		<script>
-		    //返回顶部
-            window.onscroll = function() {scrollFunction()};
-            function scrollFunction() {console.log(121);
-                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-                    document.getElementById("up").style.display = "block";
-                } else {
-                    document.getElementById("up").style.display = "none";
-                }
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-card mdui-ripple mdui-m-b-2">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">今日人品</div>
+                        <div class="mdui-card-content mdui-typo">
+                            <div class="mdui-chip mdui-shadow-3" style="width: 48px;">
+                                <span class="mdui-chip-title mdui-text-center" id="rerp0">结果</span>
+                            </div>
+                            <button class="mdui-btn mdui-color-pink" onclick="rp()">点我</button>
+                            <br>
+                            <span class="mdui-text-color-red"><b>注：仅供娱乐，请勿当真</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-col-sm-6">
+                <div class="mdui-card mdui-ripple mdui-m-b-2">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">常用分数转换器</div>
+                        <div class="mdui-card-content mdui-typo">
+                            总分200转100分制度并判断及格（120分及格）：
+                            <div style="white-space: nowrap;">
+                                <input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs200" type="number">
+                                <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal200()" style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+                            </div>
+                            <p>结果：<span id="re200"></span>&nbsp;&nbsp;<a onclick="qcal200()">清空</a></p>
+                            总分160转100分制度并判断及格（96分及格）：
+                            <div style="white-space: nowrap;">
+                                <input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs160" type="number">
+                                <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal160()" style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+                            </div>
+                            <p>结果：<span id="re160"></span>&nbsp;&nbsp;<a onclick="qcal160()">清空</a></p>
+                            总分150转100分制度并判断及格（90分及格）：
+                            <div style="white-space: nowrap;">
+                                <input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs150" type="number">
+                                <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal150()" style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+                            </div>
+                            <p>结果：<span id="re150"></span>&nbsp;&nbsp;<a onclick="qcal150()">清空</a></p>
+                            总分120转100分制度并判断及格（72分及格）：
+                            <div style="white-space: nowrap;">
+                                <input class="searchbox mdui-shadow-3" placeholder="单位:分" id="fs120" type="number">
+                                <button class="mdui-btn mdui-color-pink mdui-btn-icon" onclick="cal120()" style="margin: 0;"><i class="mdui-icon material-icons">&#xe409;</i></button>
+                            </div>
+                            <p>结果：<span id="re120"></span>&nbsp;&nbsp;<a onclick="qcal120()">清空</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
+    <footer class="mdui-container-fluid">
+        <span>&copy;Charon Studio 2023~<span id="cpyear3"></span>&nbsp;&nbsp;</span>
+        <a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
+        <a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
+        <br>
+        <a href="http://icp.im/beian/ICP-2024100068.html"><img src="http://520524.xyz/bqb" style="height: 20px;">酱2024100068号</a>
+    </footer>
+    <script>
+        //返回顶部
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            console.log(121);
+            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                document.getElementById("up").style.display = "block";
+            } else {
+                document.getElementById("up").style.display = "none";
             }
-            function up() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+        }
+
+        function up() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        var tb = document.getElementById('inputbox');
+        var dt = new Date();
+        document.getElementById("cpyear3").innerHTML = dt.getFullYear();
+
+        function backspace() {
+            var ss = tb.selectionStart;
+            var se = tb.selectionEnd;
+            var ln = tb.value.length;
+            var textbefore = tb.value.substring(0, ss);
+            var textselected = tb.value.substring(ss, se);
+            var textafter = tb.value.substring(se, ln);
+            if (ss == se) {
+                tb.value = tb.value.substring(0, ss - 1) + tb.value.substring(se, ln);
+                tb.selectionStart = ss - 1;
+                tb.selectionEnd = ss - 1;
+            } else {
+                tb.value = textbefore + textafter;
+                tb.selectionStart = ss;
+                tb.selectionEnd = ss;
             }
-			var tb = document.getElementById('inputbox');
-			var dt = new Date();
-			document.getElementById("cpyear3").innerHTML = dt.getFullYear();
+        }
 
-			function backspace() {
-				var ss = tb.selectionStart;
-				var se = tb.selectionEnd;
-				var ln = tb.value.length;
-				var textbefore = tb.value.substring(0, ss);
-				var textselected = tb.value.substring(ss, se);
-				var textafter = tb.value.substring(se, ln);
-				if (ss == se) {
-					tb.value = tb.value.substring(0, ss - 1) + tb.value.substring(se, ln);
-					tb.selectionStart = ss - 1;
-					tb.selectionEnd = ss - 1;
-				} else {
-					tb.value = textbefore + textafter;
-					tb.selectionStart = ss;
-					tb.selectionEnd = ss;
-				}
-			}
+        function cal200() {
+            var fs = document.getElementById("fs200").value;
+            var jg = Number(fs) / 2;
+            var mess = (jg >= 60) ? "已经及格" : "未及格";
+            document.getElementById("re200").innerHTML = "转换成60分制为" + jg.toString() + "，且" + mess;
+        }
 
-			function cal200() {
-				var fs = document.getElementById("fs200").value;
-				var jg = Number(fs) / 2;
-				var mess = (jg >= 60) ? "已经及格" : "未及格";
-				document.getElementById("re200").innerHTML = "转换成60分制为" + jg.toString() + "，且" + mess;
-			}
+        function qcal200() {
+            document.getElementById("fs200").value = '';
+            document.getElementById("re200").innerHTML = '';
+        }
 
-			function qcal200() {
-				document.getElementById("fs200").value = '';
-				document.getElementById("re200").innerHTML = '';
-			}
+        function cal160() {
+            var fs1 = document.getElementById("fs160").value;
+            var jg1 = Math.round(Number(fs1) / 1.6);
+            var mess1 = (jg1 >= 60) ? "已经及格" : "未及格";
+            document.getElementById("re160").innerHTML = "转换成60分制为大约" + jg1.toString() + "，且" + mess1;
+        }
 
-			function cal160() {
-				var fs1 = document.getElementById("fs160").value;
-				var jg1 = Math.round(Number(fs1) / 1.6);
-				var mess1 = (jg1 >= 60) ? "已经及格" : "未及格";
-				document.getElementById("re160").innerHTML = "转换成60分制为大约" + jg1.toString() + "，且" + mess1;
-			}
+        function qcal160() {
+            document.getElementById("fs160").value = '';
+            document.getElementById("re160").innerHTML = '';
+        }
 
-			function qcal160() {
-				document.getElementById("fs160").value = '';
-				document.getElementById("re160").innerHTML = '';
-			}
+        function cal150() {
+            var fs2 = document.getElementById("fs150").value;
+            var jg2 = Math.round(Number(fs2) / 1.5);
+            var mess2 = (jg2 >= 60) ? "已经及格" : "未及格";
+            document.getElementById("re150").innerHTML = "转换成60分制为大约" + jg2.toString() + "，且" + mess2;
+        }
 
-			function cal150() {
-				var fs2 = document.getElementById("fs150").value;
-				var jg2 = Math.round(Number(fs2) / 1.5);
-				var mess2 = (jg2 >= 60) ? "已经及格" : "未及格";
-				document.getElementById("re150").innerHTML = "转换成60分制为大约" + jg2.toString() + "，且" + mess2;
-			}
+        function qcal150() {
+            document.getElementById("fs150").value = '';
+            document.getElementById("re150").innerHTML = '';
+        }
 
-			function qcal150() {
-				document.getElementById("fs150").value = '';
-				document.getElementById("re150").innerHTML = '';
-			}
+        function cal120() {
+            var fs3 = document.getElementById("fs120").value;
+            var jg3 = Math.round(Number(fs3) / 1.2);
+            var mess3 = (jg3 >= 60) ? "已经及格" : "未及格";
+            document.getElementById("re120").innerHTML = "转换成60分制为大约" + jg3.toString() + "，且" + mess3;
+        }
 
-			function cal120() {
-				var fs3 = document.getElementById("fs120").value;
-				var jg3 = Math.round(Number(fs3) / 1.2);
-				var mess3 = (jg3 >= 60) ? "已经及格" : "未及格";
-				document.getElementById("re120").innerHTML = "转换成60分制为大约" + jg3.toString() + "，且" + mess3;
-			}
+        function qcal120() {
+            document.getElementById("fs120").value = '';
+            document.getElementById("re120").innerHTML = '';
+        }
 
-			function qcal120() {
-				document.getElementById("fs120").value = '';
-				document.getElementById("re120").innerHTML = '';
-			}
-			
-			function rp() {
-			    var rand = Math.round(Math.random()*100);
-			    document.getElementById("rerp0").innerHTML = rand;
-			}
-		</script>
-	</body>
+        function rp() {
+            var rand = Math.round(Math.random() * 100);
+            document.getElementById("rerp0").innerHTML = rand;
+        }
+    </script>
+</body>
+
 </html>
 <!--
 本网页由MeltIce制作

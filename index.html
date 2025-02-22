@@ -4,99 +4,99 @@
 -->
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<meta name="description" name="MeltIce的博客">
-		<meta name="keywords"
-			name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,MeltIce,MtIce,mtice,Ice,Melted_Ice,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
-		<link href="img/favoricon.png" rel="shortcut icon">
-		<link href="css/mdui.min.css" rel="stylesheet">
-		<link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css">
-		<script src="js/mdui.min.js"></script>
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
-		<script src="js/fetch.js"></script>
-		<style>
-			.mdui-chip {
-				background-color: white;
-			}
-		</style>
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" name="MeltIce的博客">
+    <meta name="keywords" name="AMDISYES,AMD,amd,amdisyes,amdisys,AMDISYS,MeltIce,MtIce,mtice,Ice,Melted_Ice,博客,个人博客,网络博客,个人网站,个人网页,AMD-Blog,blog,weblog,BLOG,Blog,WebLog,WEBLOG">
+    <link href="img/favoricon.png" rel="shortcut icon">
+    <link href="css/mdui.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/mdui@2.0.3/mdui.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css">
+    <script src="js/mdui.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/mdui@2.0.3/mdui.global.js"></script>
+    <script src="js/fetch.js"></script>
+    <style>
+        .mdui-chip {
+            background-color: white;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<title>MeltIce-Home</title>
-	</head>
-	<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar mdui-drawer-body-left">
-		<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
-			<div class="mdui-toolbar mdui-color-white">
-				<a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '菜单'}">
-					<i class="mdui-icon material-icons">&#xe5d2;</i>
-				</a>
-				<span class="mdui-typo-headline">MeltIce-Home</span>
-				<div class="mdui-toolbar-spacer"></div>
-				<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
-					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}">
+    <title>MeltIce-Home</title>
+</head>
+
+<body class="mdui-theme-primary-blue-grey mdui-theme-accent-pink mdui-appbar-with-toolbar mdui-drawer-body-left">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
+        <div class="mdui-toolbar mdui-color-white">
+            <a mdui-drawer="{target: '#main'}" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '菜单'}">
+                <i class="mdui-icon material-icons">&#xe5d2;</i>
+            </a>
+            <span class="mdui-typo-headline">MeltIce-Home</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+                <button class="mdui-textfield-icon mdui-btn mdui-btn-icon" mdui-tooltip="{content: '搜索'}">
 						<i class="mdui-icon material-icons">&#xe8b6;</i>
 					</button>
-					<form onsubmit="return search()">
-						<input class="mdui-textfield-input" type="text" placeholder="必应搜索" />
-					</form>
-					<button class="mdui-textfield-close mdui-btn mdui-btn-icon">
+                <form onsubmit="return search()">
+                    <input class="mdui-textfield-input" type="text" placeholder="必应搜索" />
+                </form>
+                <button class="mdui-textfield-close mdui-btn mdui-btn-icon">
 						<i class="mdui-icon material-icons">&#xe5cd;</i>
 					</button>
-				</div>
-			</div>
-		</div>
-		<div class="mdui-drawer mdui-shadow-0" id="main">
-			<ul class="mdui-list">
-				<li class="mdui-list-item mdui-ripple mdui-list-item-active">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-					<div class="mdui-list-item-content">主页</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='project.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe5c3;</i>
-					<div class="mdui-list-item-content">项目</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='down.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe2c0;</i>
-					<div class="mdui-list-item-content">下载</div>
-				</li>
-				<li class="mdui-list-item mdui-ripple" onclick="location.href='tools.html'">
-					<i class="mdui-list-item-icon mdui-icon material-icons">&#xe869;</i>
-					<div class="mdui-list-item-content">实用工具</div>
-				</li>
-				<div id="drawer"></div>
-			</ul>
-		</div>
-		<div class="mdui-dialog" id="past">
-			<div class="mdui-dialog-title">时光机</div>
-			<div class="mdui-dialog-content">请选择你想要去的页面</div>
-			<div class="mdui-dialog-actions">
-				<button class="mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/old'"">2023年的MeltIce-Blog</button>
-				<button class=" mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/past'"">2022年的MeltIce-Blog</button>
-				<button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
-			</div>
-		</div>
-		<div class="mdui-dialog" id="avatar">
-			<div class="mdui-dialog-content">
-				<div class="mdui-container">
-					<img class="mdui-img-fluid" alt="帅到爆炸的头像"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
-				</div>
-			</div>
-			<div class="mdui-dialog-actions">
-				<span style="text-align: left;" class="mdui-typo-body-2">长按图片保存</span>
-				<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
-			</div>
-		</div>
-		<noscript>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-drawer mdui-shadow-0" id="main">
+        <ul class="mdui-list">
+            <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+                <div class="mdui-list-item-content">主页</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="location.href='project.html'">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe5c3;</i>
+                <div class="mdui-list-item-content">项目</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="location.href='down.html'">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe2c0;</i>
+                <div class="mdui-list-item-content">下载</div>
+            </li>
+            <li class="mdui-list-item mdui-ripple" onclick="location.href='tools.html'">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe869;</i>
+                <div class="mdui-list-item-content">实用工具</div>
+            </li>
+            <div id="drawer"></div>
+        </ul>
+    </div>
+    <div class="mdui-dialog" id="past">
+        <div class="mdui-dialog-title">时光机</div>
+        <div class="mdui-dialog-content">请选择你想要去的页面</div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" onclick="location.href='http://amdisyes.xlphp.net/old'" ">2023年的MeltIce-Blog</button>
+				<button class=" mdui-btn mdui-ripple " onclick="location.href='http://amdisyes.xlphp.net/past' "">2022年的MeltIce-Blog</button>
+            <button class=" mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+        </div>
+    </div>
+    <div class="mdui-dialog" id="avatar">
+        <div class="mdui-dialog-content">
+            <div class="mdui-container">
+                <img class="mdui-img-fluid" alt="帅到爆炸的头像" src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg">
+            </div>
+        </div>
+        <div class="mdui-dialog-actions">
+            <span style="text-align: left;" class="mdui-typo-body-2">长按图片保存</span>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+        </div>
+    </div>
+    <noscript>
 			<div class="mdui-color-red" style="padding: 8px;">
 				<p class="mdui-typo-display-1"><b>JavaScript未开启</b></p>
 				<p class="mdui-typo-body-2">
@@ -112,228 +112,221 @@
 				<p class="mdui-typo-body-2">请检查浏览器设置或F12菜单中“禁用JavaScript”选项是否开启</p>
 			</div>
 		</noscript>
-		<marquee class="banner mdui-color-pink mdui-text-color-white">社会主义核心价值观：富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善</marquee>
-		<div class="mdui-container" id="top">
-			<div class="mdui-row" style="padding-top: 14px;">
-				<div class="mdui-col-xs-9 mdui-col-sm-10 mdui-col-lg-11">
-					<span class="mdui-typo-display-2"><b>MELTICE.</b></span>
-					<br>
-					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe192;</i>
-					<span class="mdui-m-t-2 mdui-typo-body-2 box"><noscript
+    <marquee class="banner mdui-color-pink mdui-text-color-white">社会主义核心价值观：富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善</marquee>
+    <div class="mdui-container" id="top">
+        <div class="mdui-row" style="padding-top: 14px;">
+            <div class="mdui-col-xs-9 mdui-col-sm-10 mdui-col-lg-11">
+                <span class="mdui-typo-display-2"><b>MELTICE.</b></span>
+                <br>
+                <i class="mdui-icon material-icons mdui-typo-body-2">&#xe192;</i>
+                <span class="mdui-m-t-2 mdui-typo-body-2 box"><noscript
 							class="mdui-text-color-red">时间不可用，因为JavaScript已禁用</noscript></span>
-					<br>
-					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
-					<span id="year" class="mdui-typo-body-2"></span><span class="mdui-m-t-2 mdui-typo-body-2"
-						id="date"><noscript class="mdui-text-color-red">日期不可用，因为JavaScript已禁用</noscript></span>
-					<br>
-					<i class="mdui-icon material-icons mdui-typo-body-2">&#xe0c9;</i>
-					<span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="hitokoto_text"></span><noscript
-							class="mdui-text-color-red">一言不可用，因为JavaScript已禁用</noscript></span>
-					<br>
-					<div id="tp-weather-widget" mdui-tooltip="{content: '点击看详情'}"><noscript
-							class="mdui-text-color-red mdui-typo-body-2">天气不可用，因为JavaScript已禁用</noscript></div>
-					<br>
-					<form onsubmit="return search()" class="mdui-m-b-2" style="white-space: nowrap;">
-						<input type="text" class="searchbox mdui-shadow-3 mdui-m-t-1 mdui-m-b-1" autocomplete="off"
-							id="search_input" placeholder="必应搜索...">
-						<button class="mdui-btn mdui-color-pink mdui-btn-raised mdui-btn-icon" onclick="return search()"
-							style="border-radius: 2px;"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
-					</form>
-					<!--<noscript class="mdui-text-color-red mdui-typo-body-2">搜索不可用，因为JavaScript已禁用</noscript>-->
-				</div>
-				<div class="mdui-col-xs-3 mdui-col-sm-2 mdui-col-lg-1">
-					<img class="mdui-img-fluid" style="border-radius: 50%;" alt="帅到爆炸的头像"
-						src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg"
-						mdui-tooltip="{content: '点击看大图'}" mdui-dialog="{target: '#avatar'}">
-				</div>
-			</div>
-			<div class="mdui-m-b-2 mdui-typo">
-				<span class="mdui-typo-body-2">网站累计被访问次数<br></span>
-				<img class="mdui-img-fluid" src="https://count.himiku.com/get/@huakaifg24?theme=moebooru">
-			</div>
-		</div>
-		<div class="mdui-divider"></div>
-		<div class="mdui-container mdui-m-t-3">
-			<div class="mdui-row">
-				<div class="mdui-col-sm-6">
-					<div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 315px;">
-						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">关于我</div>
-							<div class="mdui-card-content mdui-typo">
-								<li><img src="img/qq.svg" style="height:16px; width: 16px; transform: translateY(2px)translateX(-1.5px);">&nbsp;QQ:
-									<a href="https://tool.gljlw.com/qq/?qq=3480656548">3480656548</a></li>
-								<li><img src="img/bilibili.svg" style="height:16px; width: 16px; transform: translateY(2.5px)translateX(-1.5px);">&nbsp;B站: <a
-										href="https://space.bilibili.com/57690791" target="_blank">-MeltIce</a></li>
-							    <li><img src="img/github.svg" style="height:16px; width: 16px; transform: translateY(2.5px)translateX(-1.5px);">&nbsp;Github: <a href="https://github.com/Meltide">Meltide</a></li>
-								<li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;Telegram：<a href="https://t.me/MeltIce2947">@MeltIce2947</a></li>
-								<li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;我的TG频道：<a href="https://t.me/MeltProg2947">花开富贵の极品收藏夹</a></li>
-								<li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;我的TG群聊：<a href="https://t.me/MeltChat2947">轮蹲大屎馆</a></li>
-								<li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;工作室TG群：<a href="https://t.me/MeetLifeinvader">@MeetLifeinvader</a></li>
-								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0be;</i>&nbsp;邮箱1:
-									<a href="mailto:3480656548@qq.com">3480656548@qq.com</a></li>
-								<li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0e1;</i>&nbsp;邮箱2:
-									<a href="mailto:amdisyes@outlook.com">amdisyes@outlook.com</a></li>
-								<!-- <li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe89b;</i>&nbsp;邮箱3: -->
-									<!-- <a href="mailto:amdisyes@126.com">amdisyes@126.com</a></li> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="mdui-col-sm-6">
-					<div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 315px;">
-						<div class="mdui-card-primary">
-							<div class="mdui-card-primary-title">关于本网站</div>
-							<div class="mdui-card-content mdui-typo">
-								<li>MeltIce编写了100%的网站</li>
-								<li>网站使用框架: <a href="https://mdui.org">MDUI</a> v1.0.2</li>
-								<li>网站使用字体: Roboto</li>
-								<li>获取QQ头像的API来自腾讯云开发者社区</li>
-								<li>一言API(Hitokoto)由知乎大佬给出</li>
-								<li>网页由<a href="https://github.com">Github</a>托管</li>
-								<li>本网页仓库：<a href="https://github.com/Meltide/meltide.github.io">点击前往</a><br><del>能不能给我点个star...</del>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script>
-			(function(a, h, g, f, e, d, c, b) {
-				b = function() {
-					d = h.createElement(g);
-					c = h.getElementsByTagName(g)[0];
-					d.src = e;
-					d.charset = "utf-8";
-					d.async = 1;
-					c.parentNode.insertBefore(d, c)
-				};
-				a["SeniverseWeatherWidgetObject"] = f;
-				a[f] || (a[f] = function() {
-					(a[f].q = a[f].q || []).push(arguments)
-				});
-				a[f].l = +new Date();
-				if (a.attachEvent) {
-					a.attachEvent("onload", b)
-				} else {
-					a.addEventListener("load", b, false)
-				}
-			}(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
-				parseInt((new Date().getTime() / 100000000).toString(), 10)));
-			window.SeniverseWeatherWidget('show', {
-				flavor: "slim",
-				location: "WTN75JN9H56X",
-				geolocation: true,
-				language: "zh-Hans",
-				unit: "c",
-				theme: "auto",
-				token: "4595f371-fbcb-49ee-886f-8f1d68f35334",
-				hover: "enabled",
-				container: "tp-weather-widget"
-			})
-		</script>
-		<div class="mdui-divider"></div>
-		<div class="mdui-container mdui-m-t-3">
-			<div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">中国传统节日一览表</div>
-					<div class="mdui-card-content mdui-typo">
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月初一
+                <br>
+                <i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
+                <span id="year" class="mdui-typo-body-2"></span><span class="mdui-m-t-2 mdui-typo-body-2" id="date"><noscript class="mdui-text-color-red">日期不可用，因为JavaScript已禁用</noscript></span>
+                <br>
+                <i class="mdui-icon material-icons mdui-typo-body-2">&#xe0c9;</i>
+                <span id="hitokoto" class="mdui-m-t-2 mdui-typo-body-2"><span id="hitokoto_text"></span><noscript class="mdui-text-color-red">一言不可用，因为JavaScript已禁用</noscript></span>
+                <br>
+                <div id="tp-weather-widget" mdui-tooltip="{content: '点击看详情'}"><noscript class="mdui-text-color-red mdui-typo-body-2">天气不可用，因为JavaScript已禁用</noscript></div>
+                <br>
+                <form onsubmit="return search()" class="mdui-m-b-2" style="white-space: nowrap;">
+                    <input type="text" class="searchbox mdui-shadow-3 mdui-m-t-1 mdui-m-b-1" autocomplete="off" id="search_input" placeholder="必应搜索...">
+                    <button class="mdui-btn mdui-color-pink mdui-btn-raised mdui-btn-icon" onclick="return search()" style="border-radius: 2px;"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
+                </form>
+                <!--<noscript class="mdui-text-color-red mdui-typo-body-2">搜索不可用，因为JavaScript已禁用</noscript>-->
+            </div>
+            <div class="mdui-col-xs-3 mdui-col-sm-2 mdui-col-lg-1">
+                <img class="mdui-img-fluid" style="border-radius: 50%;" alt="帅到爆炸的头像" src="http://q.qlogo.cn/headimg_dl?dst_uin=3480656548&spec=640&img_type=jpg" mdui-tooltip="{content: '点击看大图'}" mdui-dialog="{target: '#avatar'}">
+            </div>
+        </div>
+        <div class="mdui-m-b-2 mdui-typo">
+            <span class="mdui-typo-body-2">网站累计被访问次数<br></span>
+            <img class="mdui-img-fluid" src="https://count.himiku.com/get/@huakaifg24?theme=moebooru">
+        </div>
+    </div>
+    <div class="mdui-divider"></div>
+    <div class="mdui-container mdui-m-t-3">
+        <div class="mdui-row">
+            <div class="mdui-col-sm-6">
+                <div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 315px;">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">关于我</div>
+                        <div class="mdui-card-content mdui-typo">
+                            <li><img src="img/qq.svg" style="height:16px; width: 16px; transform: translateY(2px)translateX(-1.5px);">&nbsp;QQ:
+                                <a href="https://tool.gljlw.com/qq/?qq=3480656548">3480656548</a></li>
+                            <li><img src="img/bilibili.svg" style="height:16px; width: 16px; transform: translateY(2.5px)translateX(-1.5px);">&nbsp;B站: <a href="https://space.bilibili.com/57690791" target="_blank">-MeltIce</a></li>
+                            <li><img src="img/github.svg" style="height:16px; width: 16px; transform: translateY(2.5px)translateX(-1.5px);">&nbsp;Github: <a href="https://github.com/Meltide">Meltide</a></li>
+                            <li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;Telegram：<a href="https://t.me/MeltIce2947">@MeltIce2947</a></li>
+                            <li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;我的TG频道：<a href="https://t.me/EatMyDatabase">花开富贵の极品收藏夹</a></li>
+                            <li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;我的TG群聊：<a href="https://t.me/LondonWC">轮蹲大屎馆</a></li>
+                            <li><img src="img/tg.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;工作室TG群：<a href="https://t.me/MeetCharon">@MeetCharon</a></li>
+                            <li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0be;</i>&nbsp;邮箱1:
+                                <a href="mailto:3480656548@qq.com">3480656548@qq.com</a></li>
+                            <li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe0e1;</i>&nbsp;邮箱2:
+                                <a href="mailto:amdisyes@outlook.com">amdisyes@outlook.com</a></li>
+                            <!-- <li><i class="mdui-icon material-icons mdui-typo-body-2">&#xe89b;</i>&nbsp;邮箱3: -->
+                            <!-- <a href="mailto:amdisyes@126.com">amdisyes@126.com</a></li> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-col-sm-6">
+                <div class="mdui-card mdui-ripple mdui-m-b-2" style="height: 315px;">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">关于本网站</div>
+                        <div class="mdui-card-content mdui-typo">
+                            <li>MeltIce编写了100%的网站</li>
+                            <li>网站使用框架: <a href="https://mdui.org">MDUI</a> v1.0.2</li>
+                            <li>网站使用字体: Roboto</li>
+                            <li>获取QQ头像的API来自腾讯云开发者社区</li>
+                            <li>一言API(Hitokoto)由知乎大佬给出</li>
+                            <li>网页由<a href="https://github.com">Github</a>托管</li>
+                            <li>本网页仓库：<a href="https://github.com/Meltide/meltide.github.io">点击前往</a><br><del>能不能给我点个star...</del>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
+            parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WTN75JN9H56X",
+            geolocation: true,
+            language: "zh-Hans",
+            unit: "c",
+            theme: "auto",
+            token: "4595f371-fbcb-49ee-886f-8f1d68f35334",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    <div class="mdui-divider"></div>
+    <div class="mdui-container mdui-m-t-3">
+        <div class="mdui-card mdui-ripple mdui-m-b-2">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">中国传统节日一览表</div>
+                <div class="mdui-card-content mdui-typo">
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月初一
 								春节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月十五
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历正月十五
 								元宵节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历二月初二
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历二月初二
 								龙抬头</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历三月初三
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历三月初三
 								上巳节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明前一天
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明前一天
 								寒食节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历4月5日前后
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历4月5日前后
 								清明节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历五月初五
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历五月初五
 								端午节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月初七
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月初七
 								七夕节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月十五
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历七月十五
 								中元节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历八月十五
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历八月十五
 								中秋节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历九月初九
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历九月初九
 								重阳节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月初一
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月初一
 								寒衣节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月十五
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历十月十五
 								下元节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历12月21日前后
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">公历12月21日前后
 								冬至节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月初八
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月初八
 								腊八节</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月二十三
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月二十三
 								小年</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月最后一天
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">农历腊月最后一天
 								除夕</span></div>
-					</div>
-				</div>
-			</div>
-			<div class="mdui-card mdui-ripple mdui-m-b-2">
-				<div class="mdui-card-primary">
-					<div class="mdui-card-primary-title">二十四节气</div>
-					<div class="mdui-card-content mdui-typo">
-						<div class="mdui-headline"><b>春季</b></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立春
+                </div>
+            </div>
+        </div>
+        <div class="mdui-card mdui-ripple mdui-m-b-2">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">二十四节气</div>
+                <div class="mdui-card-content mdui-typo">
+                    <div class="mdui-headline"><b>春季</b></div>
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立春
 								2月3-5日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">雨水
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">雨水
 								2月18-20日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">惊蛰
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">惊蛰
 								3月5-7日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">春分
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">春分
 								3月20-22日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">清明
 								4月4-6日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">谷雨
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">谷雨
 								4月19-21日</span></div>
-						<div class="mdui-headline"><b>夏季</b></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立夏
+                    <div class="mdui-headline"><b>夏季</b></div>
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立夏
 								5月5-7日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小满
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小满
 								5月20-27日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">芒种
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">芒种
 								6月5-7日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">夏至
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">夏至
 								6月21-22日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小暑
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小暑
 								7月6-8日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大暑
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大暑
 								7月22-24日</span></div>
-						<div class="mdui-headline"><b>秋季</b></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立秋
+                    <div class="mdui-headline"><b>秋季</b></div>
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立秋
 								8月7-9日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">处暑
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">处暑
 								8月22-24日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">白露
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">白露
 								9月7-9日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">秋分
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">秋分
 								9月22-24日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">寒露
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">寒露
 								10月8-9日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">霜降
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">霜降
 								10月24-24日</span></div>
-						<div class="mdui-headline"><b>冬季</b></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立冬
+                    <div class="mdui-headline"><b>冬季</b></div>
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">立冬
 								11月7-8日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小雪
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小雪
 								11月22-23日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大雪
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大雪
 								12月6-8日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">冬至
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">冬至
 								12月21-23日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小寒
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">小寒
 								1月5-7日</span></div>
-						<div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大寒
+                    <div class="mdui-chip mdui-shadow-3"><span class="mdui-chip-title mdui-typo-body-2">大寒
 								1月20-21日</span></div>
-					</div>
-				</div>
-			</div>
-		</div><!--
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
 		<div class="mdui-divider"></div>
 		<div class="mdui-container mdui-m-t-3">
 			<div class="mdui-card mdui-ripple mdui-m-b-2" style="height:200;">
@@ -346,144 +339,145 @@
 				</div>
 			</div>
 		</div>-->
-		<!--<a href="https://icp.gov.moe/?keyword=20242008" target="_blank">萌ICP备20242008号</a>-->
-		<button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i
+    <!--<a href="https://icp.gov.moe/?keyword=20242008" target="_blank">萌ICP备20242008号</a>-->
+    <button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-pink top" id="up" onclick="up()"><i
 				class="mdui-icon material-icons">&#xe5d8;</i></button>
-		<footer class="mdui-container-fluid">
-			<span>&copy;Lifeinvader Studio 2023~<span id="cpyear"></span>&nbsp;&nbsp;</span>
-			<a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
-			<a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
-			<br>
-			<a href="http://icp.im/beian/ICP-2024100068.html"><img src="http://520524.xyz/bqb" style="height: 20px;">酱2024100068号</a>
-		</footer>
-		<script>
-			//返回顶部
-			window.onscroll = function() {
-				scrollFunction()
-			};
+    <footer class="mdui-container-fluid">
+        <span>&copy;Charon Studio 2023~<span id="cpyear"></span>&nbsp;&nbsp;</span>
+        <a onclick="up()" class="mdui-typo">回顶部</a>&nbsp;&nbsp;
+        <a href="http://wapmz.com/in/56"><img src="http://wapmz.com/cn/small/56" alt="wapmz.com"></a>
+        <br>
+        <a href="http://icp.im/beian/ICP-2024100068.html"><img src="http://520524.xyz/bqb" style="height: 20px;">酱2024100068号</a>
+    </footer>
+    <script>
+        //返回顶部
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
-			function scrollFunction() {
-				console.log(121);
-				if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-					document.getElementById("up").style.display = "block";
-				} else {
-					document.getElementById("up").style.display = "none";
-				}
-			}
+        function scrollFunction() {
+            console.log(121);
+            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                document.getElementById("up").style.display = "block";
+            } else {
+                document.getElementById("up").style.display = "none";
+            }
+        }
 
-			function up() {
-				document.body.scrollTop = 0;
-				document.documentElement.scrollTop = 0;
-			}
-			//获取年份
-			var dt = new Date();
-			document.getElementById("year").innerHTML = dt.getFullYear() + "年";
-			document.getElementById("cpyear").innerHTML = dt.getFullYear();
-			//必应搜索
-			function search() {
-				if (document.getElementById("search_input").value != "") {
-					window.location.href = "https://cn.bing.com/search?q=" + document.getElementById("search_input").value;
-					document.getElementById("search_input").value = "";
-				}
-				return false;
-			}
-			//一言
-			fetch('https://v1.hitokoto.cn')
-				.then(response => response.json())
-				.then(data => {
-					const hitokoto = document.querySelector('#hitokoto_text')
-					hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
-					hitokoto.innerText = data.hitokoto
-				})
-				.catch(console.error)
-			//获取日期
-			var ThisNowDate = new Date();
-			if (document.getElementById("date")) {
-				if (ThisNowDate.getDay() == 1)
-					var Weeks = '星期一'
-				else if (ThisNowDate.getDay() == 2)
-					var Weeks = '星期二'
-				else if (ThisNowDate.getDay() == 3)
-					var Weeks = '星期三'
-				else if (ThisNowDate.getDay() == 4)
-					var Weeks = '星期四'
-				else if (ThisNowDate.getDay() == 5)
-					var Weeks = '星期五'
-				else if (ThisNowDate.getDay() == 6)
-					var Weeks = '星期六'
-				else if (ThisNowDate.getDay() == 0)
-					var Weeks = '星期日'
-				document.getElementById('date').innerHTML = ThisNowDate.getMonth() + 1 +
-					'月' +
-					ThisNowDate.getDate() + '日' + ' ' +
-					Weeks;
-			}
-			//获取时间
-			function getTime() {
-				var date = new Date();
-				var hour = date.getHours(); //获取小时
-				hour = hour < 10 ? '0' + hour : hour;
-				var minute = date.getMinutes(); // 获取分
-				minute = minute < 10 ? '0' + minute : minute;
-				var seconds = date.getSeconds(); //获取秒
-				seconds = seconds < 10 ? '0' + seconds : seconds;
-				return hour + ':' + minute + ':' + seconds;
-			}
-			setInterval(function() {
-				document.querySelector('.box').innerHTML = getTime();
-			}, 1000)
-			//鼠标点击特效
-			var a_idx = 0;
-			jQuery(document).ready(function($) {
-				$("body").click(function(e) {
-					var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
-					var $i = $("<span/>").text(a[a_idx]);
-					a_idx = (a_idx + 1) % a.length;
-					var x = e.pageX,
-						y = e.pageY;
-					$i.css({
-						"z-index": 100000000,
-						"top": y - 20,
-						"left": x,
-						"position": "absolute",
-						"font-weight": "bold",
-						"color": "#ff6651"
-					});
-					$("body").append($i);
-					$i.animate({
-						"top": y - 180,
-						"opacity": 0
-					}, 1500, function() {
-						$i.remove();
-					});
-				});
-			});
-			
-			// 目标日期
-    var targetDate = new Date("2024-06-22T00:00:00");
+        function up() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //获取年份
+        var dt = new Date();
+        document.getElementById("year").innerHTML = dt.getFullYear() + "年";
+        document.getElementById("cpyear").innerHTML = dt.getFullYear();
+        //必应搜索
+        function search() {
+            if (document.getElementById("search_input").value != "") {
+                window.location.href = "https://cn.bing.com/search?q=" + document.getElementById("search_input").value;
+                document.getElementById("search_input").value = "";
+            }
+            return false;
+        }
+        //一言
+        fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+                const hitokoto = document.querySelector('#hitokoto_text')
+                hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                hitokoto.innerText = data.hitokoto
+            })
+            .catch(console.error)
+            //获取日期
+        var ThisNowDate = new Date();
+        if (document.getElementById("date")) {
+            if (ThisNowDate.getDay() == 1)
+                var Weeks = '星期一'
+            else if (ThisNowDate.getDay() == 2)
+                var Weeks = '星期二'
+            else if (ThisNowDate.getDay() == 3)
+                var Weeks = '星期三'
+            else if (ThisNowDate.getDay() == 4)
+                var Weeks = '星期四'
+            else if (ThisNowDate.getDay() == 5)
+                var Weeks = '星期五'
+            else if (ThisNowDate.getDay() == 6)
+                var Weeks = '星期六'
+            else if (ThisNowDate.getDay() == 0)
+                var Weeks = '星期日'
+            document.getElementById('date').innerHTML = ThisNowDate.getMonth() + 1 +
+                '月' +
+                ThisNowDate.getDate() + '日' + ' ' +
+                Weeks;
+        }
+        //获取时间
+        function getTime() {
+            var date = new Date();
+            var hour = date.getHours(); //获取小时
+            hour = hour < 10 ? '0' + hour : hour;
+            var minute = date.getMinutes(); // 获取分
+            minute = minute < 10 ? '0' + minute : minute;
+            var seconds = date.getSeconds(); //获取秒
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            return hour + ':' + minute + ':' + seconds;
+        }
+        setInterval(function() {
+                document.querySelector('.box').innerHTML = getTime();
+            }, 1000)
+            //鼠标点击特效
+        var a_idx = 0;
+        jQuery(document).ready(function($) {
+            $("body").click(function(e) {
+                var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+                var $i = $("<span/>").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length;
+                var x = e.pageX,
+                    y = e.pageY;
+                $i.css({
+                    "z-index": 100000000,
+                    "top": y - 20,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "color": "#ff6651"
+                });
+                $("body").append($i);
+                $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                }, 1500, function() {
+                    $i.remove();
+                });
+            });
+        });
 
-    // 更新倒计时
-    function updateCountdown() {
-      var now = new Date();
-      var timeLeft = targetDate - now;
+        // 目标日期
+        var targetDate = new Date("2024-06-22T00:00:00");
 
-      // 计算剩余的天、小时、分钟和秒
-      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        // 更新倒计时
+        function updateCountdown() {
+            var now = new Date();
+            var timeLeft = targetDate - now;
 
-      // 更新页面上的倒计时显示
-      document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+            // 计算剩余的天、小时、分钟和秒
+            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-      // 每秒钟更新一次倒计时
-      setTimeout(updateCountdown, 1000);
-    }
+            // 更新页面上的倒计时显示
+            document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
 
-    // 启动倒计时
-    updateCountdown();
-		</script>
-	</body>
+            // 每秒钟更新一次倒计时
+            setTimeout(updateCountdown, 1000);
+        }
+
+        // 启动倒计时
+        updateCountdown();
+    </script>
+</body>
+
 </html>
 <!--
 本网页由MeltIce制作
