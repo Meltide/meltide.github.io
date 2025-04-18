@@ -1,0 +1,74 @@
+:root {
+    --black: #171717;
+    --red: #D81765;
+    --green: #97D01A;
+    --yellow: #FFA800;
+    --blue: #16B1FB;
+    --magenta: #FF2491;
+    --cyan: #0FDCB6;
+    --white: #EBEBEB;
+    --grey: #A4A4A4;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+body {
+    background-color: #171717;
+    color: var(--white);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+body a {
+    color: var(--white);
+}
+
+body a:visited {
+    color: var(--white);
+}
+
+.link a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.link a:visited {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.container,
+.container-fluid {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 8px;
+    padding-left: 8px
+}
+
+.container-fluid::after,
+.container::after {
+    display: table;
+    clear: both;
+    content: ''
+}
+
+.container {
+    width: 96%;
+    max-width: 1280px
+}
+
+@media (min-width:600px) {
+    .container {
+        width: 94%
+    }
+}
+
+@media (min-width:1024px) {
+    .container {
+        width: 92%
+    }
+}

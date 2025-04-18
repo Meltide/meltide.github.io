@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="一个基于Python3的伪操作系统">
+    <meta name="keywords" content="pyos,mpga-pyos,mpga,python,python3,操作系统,os,系统,system,伪操作系统">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon">
+    <title>MPGA PyOS</title>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div style="color: var(--grey);">MPGA PyOS Open Source System</div>
+        <pre style="color: var(--blue); font-family: 'JetBrains Mono';">
+ __  __  ___   ___    _
+|  \/  || _ \ / __|  /_\
+| |\/| ||  _/| (_ | / _ \
+|_|  |_||_|   \___|/_/ \_\        
+        </pre>
+        <div style="color: var(--yellow);">Make MyOS Great Again!</div>
+        <br>
+        <div id="tips"></div>
+        <br>
+        <div style="color: var(--red)" class="link">
+            Contributors: MeltIce, Yukari2024, EricDing618
+            <br>
+            Visit this project in github: <a href="https://github.com/Meltide/mpga-pyos">github.com/Meltide/mpga-pyos</a>
+            <br>
+            MPGA Team Telegram Group: <a href="https://t.me/MPGATeam">@MPGATeam</a>
+            <br>
+            MPGA Team Matrix Group: #MPGATeam:mozilla.org
+        </div>
+        <br>
+        <div style="color: var(--cyan)">Also try PyOS's improved version by minqwq and bibimingming!</div>
+        <br>
+        <div>Last login: <span style="color: var(--cyan);" id="time"></span></div>
+        <br>
+        <div>===================================</div>
+        <br>
+        <div>
+            View the github project: 
+            <br>
+            <a style="color: var(--blue); text-decoration: none;" href="https://github.com/Meltide/mpga-pyos">github.com/Meltide/mpga-pyos</a>
+        </div>
+        <br>
+        <div>
+            Download the latest version: 
+            <br>
+            <a style="color: var(--blue); text-decoration: none;" href="https://github.com/Meltide/mpga-pyos/releases/latest">github.com/Meltide/mpga-pyos/releases/latest</a>
+        </div>
+    </div>
+    <script>
+        const tips = [
+            "You can find the default password in the passwd file.",
+            "Maybe the coverter is useless :)",
+            "'root' is the default user.",
+            "Is this file system real?",
+            "Columns make the calculator work."
+        ];
+        const randomItem = tips[Math.floor(Math.random() * tips.length)];
+        document.getElementById("tips").innerText = randomItem;
+
+        const date = new Date();
+        const year = date.getFullYear().toString().substr(2, 2);
+        const month = (date.getMonth() + 1).toString().padStart(2, "0");
+        const day = date.getDate().toString().padStart(2, "0");
+        const hour = date.getHours().toString().padStart(2, "0");
+        const minute = date.getMinutes().toString().padStart(2, "0");
+        const second = date.getSeconds().toString().padStart(2, "0");
+        document.getElementById("time").innerText = `${year}/${month}/${day} ${hour}:${minute}:${second}`;
+    </script>
+</body>
+
+</html>
