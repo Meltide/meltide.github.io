@@ -12,13 +12,13 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url("../fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    src: url("../fonts/JetBrainsMono-Medium.woff2") format("woff2");
 }
 
 body {
     background-color: #171717;
     color: var(--white);
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
 }
 
