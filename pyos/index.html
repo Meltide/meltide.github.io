@@ -53,6 +53,10 @@
             <br>
             <a style="color: var(--blue); text-decoration: none;" href="https://github.com/Meltide/mpga-pyos/releases/latest">github.com/Meltide/mpga-pyos/releases/latest</a>
         </div>
+        <br>
+        <div>===================================</div>
+        <br>
+        <div style="color: var(--grey);">(C) MPGA Studio 2024-<span id="year"></span></div>
     </div>
     <script>
         const tips = [
@@ -67,12 +71,14 @@
 
         const date = new Date();
         const year = date.getFullYear().toString().substr(2, 2);
+        const fullyear = date.getFullYear().toString();
         const month = (date.getMonth() + 1).toString().padStart(2, "0");
         const day = date.getDate().toString().padStart(2, "0");
         const hour = date.getHours().toString().padStart(2, "0");
         const minute = date.getMinutes().toString().padStart(2, "0");
         const second = date.getSeconds().toString().padStart(2, "0");
         document.getElementById("time").innerText = `${year}/${month}/${day} ${hour}:${minute}:${second}`;
+        document.getElementById("year").innerText = fullyear;
     </script>
 </body>
 
