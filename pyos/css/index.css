@@ -18,7 +18,7 @@
 body {
     background-color: #171717;
     color: var(--white);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono';
 }
 
 body a {
