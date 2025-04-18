@@ -19,6 +19,7 @@ body {
     background-color: #171717;
     color: var(--white);
     font-family: 'JetBrains Mono';
+    font-size: 0.8rem;
 }
 
 body a {
