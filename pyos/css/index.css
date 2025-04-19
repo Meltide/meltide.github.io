@@ -46,8 +46,8 @@ body a:visited {
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
-    /*padding-right: 8px;*/
-    /*padding-left: 8px*/
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 .container-fluid::after,
