@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: #171717;
+    background-color: var(--black);
     color: var(--white);
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
@@ -58,7 +58,7 @@ body a:visited {
 }
 
 .container {
-    width: 96%;
+    width: 100%;
     max-width: 1280px
 }
 
