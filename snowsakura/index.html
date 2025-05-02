@@ -7,6 +7,7 @@
     <meta name="author" content="雪樱">
     <meta name="description" content="雪樱の个人网站">
     <meta name="keywords" content="雪樱,SnowSakura,寒凝雪,寒凝喵,hanningxue,hanningmiao,hanninxue,hanninmiao,hnx,hnm,个人网站,博客,blog">
+    <link rel="icon" content="img/favicon.jpg">
     <link rel="stylesheet" href="css/mdui.min.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/mdui.min.js"></script>
@@ -47,7 +48,14 @@
         </ul>
     </div>
 
-    <div class="mdui-container mdui-card background-card mdui-m-b-2" style="margin-top: 5.5rem;">
+    <div class="mdui-container mdui-card background-card mdui-m-t-2 mdui-m-b-2">
+        <form onsubmit="return search()" style="white-space: nowrap;">
+            <input type="text" class="searchbox mdui-m-t-1 mdui-m-b-1" autocomplete="off" id="search_input" placeholder="必应搜索...">
+            <button class="mdui-btn mdui-color-theme-accent mdui-btn-raised mdui-btn-icon" onclick="return search()" style="border-radius: 2px;"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
+        </form>
+    </div>
+
+    <div class="mdui-container mdui-card background-card mdui-m-b-2">
         <div class="mdui-typo-display-3" style="font-size: 4rem;">
             Hi!
             <br>
@@ -151,6 +159,14 @@
         var dt = new Date();
         document.getElementById("year").innerHTML = dt.getFullYear() + "年";
         document.getElementById("cpyear").innerHTML = dt.getFullYear();
+        //必应搜索
+        function search() {
+            if (document.getElementById("search_input").value != "") {
+                window.location.href = "https://cn.bing.com/search?q=" + document.getElementById("search_input").value;
+                document.getElementById("search_input").value = "";
+            }
+            return false;
+        }
     </script>
 </body>
 
