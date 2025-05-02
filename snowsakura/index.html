@@ -48,13 +48,6 @@
         </ul>
     </div>
 
-    <div class="mdui-container mdui-card background-card mdui-m-t-2 mdui-m-b-2">
-        <form onsubmit="return search()" style="white-space: nowrap;">
-            <input type="text" class="searchbox mdui-m-t-1 mdui-m-b-1" autocomplete="off" id="search_input" placeholder="必应搜索...">
-            <button class="mdui-btn mdui-color-theme-accent mdui-btn-raised mdui-btn-icon" onclick="return search()" style="border-radius: 2px;"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
-        </form>
-    </div>
-
     <div class="mdui-container mdui-card background-card mdui-m-b-2">
         <div class="mdui-typo-display-3" style="font-size: 4rem;">
             Hi!
@@ -73,6 +66,10 @@
             <i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
             <span id="year" class="mdui-typo-body-2"></span><span class="mdui-m-t-2 mdui-typo-body-2" id="date">获取日期中...ꉂ(ˊᗜˋ*)</span>
         </div>
+        <form onsubmit="return search()" class="mdui-m-b-2" style="white-space: nowrap;">
+            <input type="text" class="searchbox mdui-m-t-1 mdui-m-b-1" autocomplete="off" id="search_input" placeholder="必应搜索...">
+            <button class="mdui-btn mdui-color-theme-accent mdui-btn-raised mdui-btn-icon" onclick="return search()" style="border-radius: 2px;"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
+        </form>
         <div>
             <span class="mdui-typo-body-2 mdui-m-t-1">网站累计被访问次数<br></span>
             <img class="mdui-img-fluid" src="https://count.himiku.com/get/@snowsakura?theme=rule34">
