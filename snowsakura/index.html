@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="author" content="雪樱">
     <meta name="description" content="雪樱の个人网站">
-    <meta name="keywords"
-        content="雪樱,SnowSakura,寒凝雪,寒凝喵,hanningxue,hanningmiao,hanninxue,hanninmiao,hnx,hnm,个人网站,博客,blog">
+    <meta name="keywords" content="雪樱,SnowSakura,寒凝雪,寒凝喵,hanningxue,hanningmiao,hanninxue,hanninmiao,hnx,hnm,个人网站,博客,blog">
     <link rel="stylesheet" href="css/mdui.min.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/mdui.min.js"></script>
@@ -48,19 +47,62 @@
         </ul>
     </div>
 
-    <div class="background">
-        <div class="mdui-container mdui-card background-card">
-            <div class="mdui-typo-display-3" style="font-size: 4rem;">
-                Hi!
-                <br>
-                I'm 雪樱
-            </div>
-            <div id="hitokoto" class="mdui-m-t-2 mdui-typo-subheading" style="font-weight: bold;"><span
-                    id="hitokoto_text">:D 获取中...</span></div>
+    <div class="mdui-container mdui-card background-card" style="margin-top: 5.5rem;">
+        <div class="mdui-typo-display-3" style="font-size: 4rem;">
+            Hi!
+            <br>
+            I'm 雪樱
+        </div>
+        <div id="hitokoto" class="mdui-m-t-2 mdui-typo-subheading" style="font-weight: bold;"><span id="hitokoto_text">:D 获取中...</span></div>
+    </div>
+
+    <div class="mdui-container mdui-card background-card">
+        <div>
+            <i class="mdui-icon material-icons mdui-typo-body-2">&#xe192;</i>
+            <span class="mdui-m-t-2 mdui-typo-body-2 box">获取时间中...(σ≧︎▽︎≦︎)σ。</span>
+        </div>
+        <div>
+            <i class="mdui-icon material-icons mdui-typo-body-2">&#xe916;</i>
+            <span id="year" class="mdui-typo-body-2"></span><span class="mdui-m-t-2 mdui-typo-body-2" id="date">获取日期中...ꉂ(ˊᗜˋ*)</span>
+        </div>
+        <div>
+            <span class="mdui-typo-body-2">网站累计被访问次数<br></span>
+            <img class="mdui-img-fluid" src="https://count.himiku.com/get/@snowsakura?theme=rule34">
         </div>
     </div>
 
+    <div class="mdui-container mdui-card background-card">
+        <h2>我的联系方式</h2>
+        <li><img src="icons/qq.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;QQ:
+            <a href="https://tool.gljlw.com/qq/?qq=2494542637">2494542637</a>
+        </li>
+        <li><img src="icons/telegram.svg" style="height:13.5px; width: 13.5px; transform: translateY(2px);">&nbsp;Telegram：
+            <a href="https://t.me/hanningxue">@hanningxue</a>
+        </li>
+    </div>
+
+    <button class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent top" id="up" onclick="up()"><i class="mdui-icon material-icons">&#xe5d8;</i></button>
+
     <script>
+        //返回顶部
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        
+        function scrollFunction() {
+            console.log(121);
+            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                document.getElementById("up").style.display = "block";
+            } else {
+                document.getElementById("up").style.display = "none";
+            }
+        }
+        
+        function up() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        // 一言
         fetch('https://v1.hitokoto.cn')
             .then(response => response.json())
             .then(data => {
@@ -69,6 +111,46 @@
                 hitokoto.innerText = data.hitokoto
             })
             .catch(console.error)
+        //获取时间
+        function getTime() {
+            var date = new Date();
+            var hour = date.getHours(); //获取小时
+            hour = hour < 10 ? '0' + hour : hour;
+            var minute = date.getMinutes(); // 获取分
+            minute = minute < 10 ? '0' + minute : minute;
+            var seconds = date.getSeconds(); //获取秒
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            return hour + ':' + minute + ':' + seconds;
+        }
+        setInterval(function () {
+            document.querySelector('.box').innerHTML = getTime();
+        }, 1000)
+        //获取日期
+        var ThisNowDate = new Date();
+        if (document.getElementById("date")) {
+            if (ThisNowDate.getDay() == 1)
+                var Weeks = '星期一'
+            else if (ThisNowDate.getDay() == 2)
+                var Weeks = '星期二'
+            else if (ThisNowDate.getDay() == 3)
+                var Weeks = '星期三'
+            else if (ThisNowDate.getDay() == 4)
+                var Weeks = '星期四'
+            else if (ThisNowDate.getDay() == 5)
+                var Weeks = '星期五'
+            else if (ThisNowDate.getDay() == 6)
+                var Weeks = '星期六'
+            else if (ThisNowDate.getDay() == 0)
+                var Weeks = '星期日'
+            document.getElementById('date').innerHTML = ThisNowDate.getMonth() + 1 +
+                '月' +
+                ThisNowDate.getDate() + '日' + ' ' +
+                Weeks;
+        }
+        //获取年份
+        var dt = new Date();
+        document.getElementById("year").innerHTML = dt.getFullYear() + "年";
+        document.getElementById("cpyear").innerHTML = dt.getFullYear();
     </script>
 </body>
 
