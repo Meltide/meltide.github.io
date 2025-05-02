@@ -9,3 +9,45 @@ body {
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.7)
 }
+
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    border-radius: 50%;
+    display: none;
+}
+
+.searchbox {
+	background-color: white;
+	border-radius: 2px;
+	border: 0;
+	height: 33px;
+	padding-left: 10px;
+	-webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !important
+}
+
+footer {
+	background-color: #EEEEEE;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+footer span {
+	color: dimgrey;
+	font-size: 13px;
+}
+
+footer a {
+	color: dimgrey;
+	font-size: 13px;
+}
+
+footer a:visited {
+	color: dimgrey;
+}
