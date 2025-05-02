@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="雪樱">
+    <meta name="description" content="雪樱の个人网站">
+    <meta name="keywords"
+        content="雪樱,SnowSakura,寒凝雪,寒凝喵,hanningxue,hanningmiao,hanninxue,hanninmiao,hnx,hnm,个人网站,博客,blog">
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/mdui.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <title>雪樱の个人网站</title>
+</head>
+
+<body class="mdui-theme-primary-light-blue mdui-theme-accent-light-blue mdui-drawer-body-left mdui-appbar-with-toolbar">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#main-drawer'}">
+                <i class="mdui-icon material-icons mdui-text-color-white">&#xe5d2;</i>
+            </a>
+            <a href="javascript:;" class="mdui-typo-headline mdui-text-color-white">雪樱の个人网站</a>
+        </div>
+    </div>
+
+    <div class="mdui-drawer mdui-color-white" id="main-drawer">
+        <div class="mdui-grid-tile">
+            <a href="javascript:;"><img src="https://pic1.imgdb.cn/item/681389e758cb8da5c8d6391e.png" /></a>
+            <div class="mdui-grid-tile-actions">
+                <div class="mdui-grid-tile-text">
+                    <div class="mdui-grid-tile-title">雪樱</div>
+                    <div class="mdui-grid-tile-subtitle">不许揪喵尾!🚫</div>
+                </div>
+            </div>
+        </div>
+        <ul class="mdui-list">
+            <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+                <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+                <div class="mdui-list-item-content">主页</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="background">
+        <div class="mdui-container mdui-card background-card">
+            <div class="mdui-typo-display-3" style="font-size: 4rem;">
+                Hi!
+                <br>
+                I'm 雪樱
+            </div>
+            <div id="hitokoto" class="mdui-m-t-2 mdui-typo-subheading" style="font-weight: bold;"><span
+                    id="hitokoto_text">:D 获取中...</span></div>
+        </div>
+    </div>
+
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(response => response.json())
+            .then(data => {
+                const hitokoto = document.querySelector('#hitokoto_text')
+                hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                hitokoto.innerText = data.hitokoto
+            })
+            .catch(console.error)
+    </script>
+</body>
+
+</html>

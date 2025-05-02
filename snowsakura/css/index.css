@@ -1,0 +1,12 @@
+body {
+    background-image: url('https://pic1.imgdb.cn/item/6813895358cb8da5c8d638eb.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.background-card {
+    margin-top: 5.5rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.7)
+}
